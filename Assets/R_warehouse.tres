@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cfnarov0o7gcq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hp4jo"]
+shading_mode = 2
+diffuse_mode = 1
+albedo_color = Color(0.42835358, 0.1704134, 0.1627424, 1)
+texture_filter = 0
+
+[resource]
+next_pass = SubResource("StandardMaterial3D_hp4jo")
