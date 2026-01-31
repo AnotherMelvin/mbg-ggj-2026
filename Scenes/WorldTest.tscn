@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://b5ddg5kvw3a6i"]
 
-[ext_resource type="Script" uid="uid://diiynush0lkut" path="res://Scripts/CharacterController.gd" id="1_chm0m"]
-[ext_resource type="Script" uid="uid://bdnhpue0rmrvt" path="res://Scripts/RobotPath.gd" id="1_r8vti"]
-[ext_resource type="Script" uid="uid://11btah808tow" path="res://Scripts/PathfindingCharacterController.gd" id="3_hkm8i"]
-[ext_resource type="PackedScene" uid="uid://cqqsd4hnp5reu" path="res://Scenes/EnemyAreaTrigger.tscn" id="4_jxptq"]
-[ext_resource type="PackedScene" uid="uid://bsjxqe8jbhkdi" path="res://Scenes/TaskAreaTrigger.tscn" id="4_yyb55"]
+[ext_resource type="Script" uid="uid://diiynush0lkut" path="res://Scripts/Gameplay/CharacterController.gd" id="1_chm0m"]
+[ext_resource type="Script" uid="uid://bdnhpue0rmrvt" path="res://Scripts/Gameplay/RobotPath.gd" id="1_r8vti"]
+[ext_resource type="Script" uid="uid://11btah808tow" path="res://Scripts/Gameplay/PathfindingCharacterController.gd" id="3_hkm8i"]
+[ext_resource type="PackedScene" uid="uid://cqqsd4hnp5reu" path="res://Scenes/Gameplay/EnemyAreaTrigger.tscn" id="4_jxptq"]
+[ext_resource type="PackedScene" uid="uid://bsjxqe8jbhkdi" path="res://Scenes/Gameplay/TaskAreaTrigger.tscn" id="4_yyb55"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r8vti"]
 

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cji80fglyk425" path="res://Assets/blockout/BO_R_warehouse.fbx" id="3_m5wjk"]
 [ext_resource type="PackedScene" uid="uid://d3srkibdcng5b" path="res://Assets/blockout/BO_R_server.fbx" id="4_goaju"]
 [ext_resource type="PackedScene" uid="uid://dmwelk5s5v31d" path="res://Assets/enemy_rammer.fbx" id="5_nm3jk"]
-[ext_resource type="Script" uid="uid://diiynush0lkut" path="res://Scripts/CharacterController.gd" id="6_6dbnu"]
+[ext_resource type="Script" uid="uid://diiynush0lkut" path="res://Scripts/Gameplay/CharacterController.gd" id="6_6dbnu"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6dbnu"]
 

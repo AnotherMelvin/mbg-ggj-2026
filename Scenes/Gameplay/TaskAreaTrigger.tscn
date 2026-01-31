@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://cqqsd4hnp5reu"]
+[gd_scene format=3 uid="uid://bsjxqe8jbhkdi"]
 
-[ext_resource type="Script" uid="uid://dwcvf6l760s0u" path="res://Scripts/EnemyAreaTrigger.gd" id="1_iujq1"]
+[ext_resource type="Script" uid="uid://cgx45sonk01m" path="res://Scripts/Gameplay/TaskAreaTrigger.gd" id="1_62lka"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1lfai"]
 
@@ -8,8 +8,8 @@
 transparency = 1
 albedo_color = Color(0.18378833, 0.44223362, 0.26211098, 0.4117647)
 
-[node name="EnemyAreaTrigger" type="Node3D" unique_id=290512116]
-script = ExtResource("1_iujq1")
+[node name="TaskAreaTrigger" type="Node3D" unique_id=290512116]
+script = ExtResource("1_62lka")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=2034945164]
 collision_mask = 16
@@ -24,3 +24,4 @@ material_override = SubResource("StandardMaterial3D_62lka")
 rings = 18
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
