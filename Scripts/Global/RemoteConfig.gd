@@ -22,8 +22,9 @@ func _ready():
 	http_request.request_completed.connect(_on_request_completed)
 	
 	# Send the request
-	print("Fetching remote config...")
-	var error = http_request.request(REMOTE_URL)
+	var url_with_cache_buster = REMOTE_URL + "?t=" + str(Time.get_unix_time_from_system())
+	print("Fetching: " + url_with_cache_buster)
+	var error = http_request.request(url_with_cache_buster)
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
 
