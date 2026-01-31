@@ -4,9 +4,10 @@ extends CanvasLayer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 var new_scene_path : String 
 
+func _ready() -> void:
+	_toggle_color_rect(false)
 
 func change_to(scene_name: Utility.SCENE_NAME_TYPE) -> void:
-	_toggle_color_rect(false)
 	_load_scene_path(scene_name)
 	_switch_scene()
 	

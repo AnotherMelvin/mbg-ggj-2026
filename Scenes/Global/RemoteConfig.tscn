@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://3wkjg88cjeep"]
+
+[ext_resource type="Script" uid="uid://bco6jtqktoq83" path="res://Scripts/Global/RemoteConfig.gd" id="1_h8wli"]
+
+[node name="RemoteConfig" type="Node3D" unique_id=911059669]
+script = ExtResource("1_h8wli")

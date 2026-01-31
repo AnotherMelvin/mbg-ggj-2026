@@ -17,9 +17,10 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Utility="*uid://c8yggw4v26muj"
+RemoteConfig="*uid://3wkjg88cjeep"
 AudioManager="*uid://d1dnuvrtcub3r"
 SceneManager="*uid://dqhj0tb6vxlgk"
+Utility="*uid://c8yggw4v26muj"
 
 [display]
 
