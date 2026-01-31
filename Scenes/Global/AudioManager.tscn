@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d1dnuvrtcub3r"]
 
-[ext_resource type="Script" uid="uid://c3cu0m51gtp2n" path="res://Scripts/AudioManager.gd" id="1_dygvs"]
-[ext_resource type="Script" uid="uid://b453m142y1nsg" path="res://Scripts/SoundEffectSetting.gd" id="2_i2xd5"]
+[ext_resource type="Script" uid="uid://c3cu0m51gtp2n" path="res://Scripts/Global/AudioManager.gd" id="1_dygvs"]
+[ext_resource type="Script" uid="uid://b453m142y1nsg" path="res://Scripts/Global/SoundEffectSetting.gd" id="2_i2xd5"]
 [ext_resource type="Resource" uid="uid://dodjbssyau0be" path="res://Resources/SFX/BaseSFX.tres" id="3_u6owb"]
 
 [node name="AudioManager" type="Node3D" unique_id=901903514]

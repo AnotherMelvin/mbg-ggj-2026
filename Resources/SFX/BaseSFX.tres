@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="SoundEffect" format=3 uid="uid://dodjbssyau0be"]
 
-[ext_resource type="Script" uid="uid://b453m142y1nsg" path="res://Scripts/SoundEffectSetting.gd" id="1_w5j6v"]
+[ext_resource type="Script" uid="uid://b453m142y1nsg" path="res://Scripts/Global/SoundEffectSetting.gd" id="1_w5j6v"]
 [ext_resource type="AudioStream" uid="uid://c6tjksjbhar07" path="res://Audio/SFX/PowerUp.wav" id="2_syojd"]
 
 [resource]

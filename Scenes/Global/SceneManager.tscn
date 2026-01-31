@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dqhj0tb6vxlgk"]
 
-[ext_resource type="Script" uid="uid://cx7kjeel2psyo" path="res://Scripts/SceneManager.gd" id="1_yueht"]
+[ext_resource type="Script" uid="uid://cx7kjeel2psyo" path="res://Scripts/Global/SceneManager.gd" id="1_m76si"]
 
 [sub_resource type="Animation" id="Animation_yueht"]
 resource_name = "Fade"
@@ -55,7 +55,7 @@ _data = {
 
 [node name="SceneManager" type="CanvasLayer" unique_id=2146449751]
 layer = 999
-script = ExtResource("1_yueht")
+script = ExtResource("1_m76si")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1271426455]
 anchors_preset = 15
