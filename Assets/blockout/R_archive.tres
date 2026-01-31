@@ -1,7 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://f77o2jdvhpog"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hp4jo"]
-shading_mode = 2
 diffuse_mode = 1
 albedo_color = Color(0.08644203, 0.09597438, 0.17560723, 1)
 texture_filter = 0

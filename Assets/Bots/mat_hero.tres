@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d1f85ol0kl7kn"]
+
+[ext_resource type="Texture2D" uid="uid://cs1riaeyac77a" path="res://Assets/Bots/bot_archive_tex_bot.png" id="1_ujqa4"]
+
+[resource]
+resource_name = "mat_hero"
+shading_mode = 0
+albedo_texture = ExtResource("1_ujqa4")
+texture_filter = 2

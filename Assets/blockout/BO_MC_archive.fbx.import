@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dmwelk5s5v31d"
-path="res://.godot/imported/enemy_rammer.fbx-f52922ae99837fedcdf4d086dca49a08.scn"
+uid="uid://dpwaacoc7wybq"
+path="res://.godot/imported/BO_MC_archive.fbx-abcf9fcf07487c38d5c71d2d538df370.scn"
 
 [deps]
 
-source_file="res://Assets/enemy_rammer.fbx"
-dest_files=["res://.godot/imported/enemy_rammer.fbx-f52922ae99837fedcdf4d086dca49a08.scn"]
+source_file="res://Assets/blockout/BO_MC_archive.fbx"
+dest_files=["res://.godot/imported/BO_MC_archive.fbx-abcf9fcf07487c38d5c71d2d538df370.scn"]
 
 [params]
 
@@ -38,11 +38,9 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={
-"materials": {
-"tx_baddie": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://Assets/mat_baddie.tres",
-"use_external/path": "uid://bo1a00kcpusme"
+"nodes": {
+"PATH:AnimationPlayer": {
+"optimizer/enabled": false
 }
 }
 }

@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b4apxnhbjc8y1"
-path="res://.godot/imported/R_archive.glb-84d3430e7e2fd7d88c935be04c5d4bd3.scn"
+uid="uid://ctyx3ipc8j0oe"
+path="res://.godot/imported/bot_warehouse.glb-0e17181a8ec06685f3a7cdff5259834b.scn"
 
 [deps]
 
-source_file="res://Assets/blockout/R_archive.glb"
-dest_files=["res://.godot/imported/R_archive.glb-84d3430e7e2fd7d88c935be04c5d4bd3.scn"]
+source_file="res://Assets/Bots/bot_warehouse.glb"
+dest_files=["res://.godot/imported/bot_warehouse.glb-0e17181a8ec06685f3a7cdff5259834b.scn"]
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true
@@ -37,6 +37,14 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"materials": {
+"mat_hero": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/Bots/mat_bot.tres",
+"use_external/path": "uid://clkiqatsise87"
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
