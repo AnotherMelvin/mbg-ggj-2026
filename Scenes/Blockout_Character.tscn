@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dalrskgrnlpos"]
+
+[ext_resource type="PackedScene" uid="uid://de5pi0emygggu" path="res://Assets/blockout/BO_R_archive.fbx" id="1_phkoo"]
+[ext_resource type="PackedScene" uid="uid://d1elj1ieswvte" path="res://Assets/blockout/BO_R_kitchen.fbx" id="2_6dbnu"]
+[ext_resource type="PackedScene" uid="uid://cji80fglyk425" path="res://Assets/blockout/BO_R_warehouse.fbx" id="3_m5wjk"]
+[ext_resource type="PackedScene" uid="uid://d3srkibdcng5b" path="res://Assets/blockout/BO_R_server.fbx" id="4_goaju"]
+[ext_resource type="PackedScene" uid="uid://dmwelk5s5v31d" path="res://Assets/enemy_rammer.fbx" id="5_nm3jk"]
+[ext_resource type="Script" uid="uid://diiynush0lkut" path="res://Scripts/CharacterController.gd" id="6_6dbnu"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6dbnu"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_phkoo"]
+
+[node name="Node3D" type="Node3D" unique_id=478515854]
+
+[node name="BO_R_archive" parent="." unique_id=1714942383 instance=ExtResource("1_phkoo")]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, -28.708845, 0, 2.175)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="BO_R_archive" unique_id=1923921839]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, -1.4390163, 8.143914, -0.8510374)
+light_color = Color(0.9579559, 0.806854, 0.90166336, 1)
+light_energy = 200.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+omni_range = 15.899
+omni_attenuation = 1.015
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BO_R_archive" unique_id=220512612]
+shape = SubResource("WorldBoundaryShape3D_6dbnu")
+
+[node name="BO_R_kitchen" parent="." unique_id=1909093621 instance=ExtResource("2_6dbnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.487122, 0, 0)
+layers = 2
+sorting_offset = 1.0
+
+[node name="BO_R_warehouse" parent="." unique_id=609283386 instance=ExtResource("3_m5wjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.430725, 0, 0)
+layers = 4
+
+[node name="BO_R_server" parent="." unique_id=259881219 instance=ExtResource("4_goaju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.36751, 0, 0)
+layers = 8
+
+[node name="enemy_rammer" parent="." unique_id=1190726719 instance=ExtResource("5_nm3jk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.5862, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1810240879]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19118595, 8.613782, 1.3239627)
+visible = false
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1717352930]
+transform = Transform3D(0.9993026, 0, 0.037341267, -0.026404263, 0.7071068, 0.70661366, -0.026404263, -0.7071068, 0.70661366, -28.101255, 16.095978, 16.8044)
+cull_mask = 1047553
+fov = 40.5
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=690578510]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.418629, 1.2390876, 0)
+script = ExtResource("6_6dbnu")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CharacterBody3D" unique_id=781157827]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=869766256]
+shape = SubResource("CylinderShape3D_phkoo")
