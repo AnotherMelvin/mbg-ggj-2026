@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://gflctvoh33db"]
+[gd_scene format=3 uid="uid://c2au3fakiqkfq"]
 
 [ext_resource type="Script" uid="uid://dnnkdgykmp8ln" path="res://Scripts/UITest.gd" id="1_hup40"]
 [ext_resource type="Script" uid="uid://ht765wwh4vmm" path="res://Scripts/UI/ProfileUI.gd" id="2_1oc5i"]
@@ -76,6 +76,18 @@ offset_top = 296.0
 offset_right = 1007.0
 offset_bottom = 670.0
 script = ExtResource("2_1oc5i")
+
+[node name="HasClose" type="RichTextLabel" parent="Panel" unique_id=83319980]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 77
+text = "hasClose = false"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="OpenButton" to="." method="_on_open_button_pressed"]
 [connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
