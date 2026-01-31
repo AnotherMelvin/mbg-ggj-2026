@@ -17,13 +17,14 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+GlobalAccess="*uid://whafxk35mxks"
+RemoteConfig="*uid://3wkjg88cjeep"
 SaveManager="*uid://bwca3ic05l62k"
 SceneManager="*uid://dqhj0tb6vxlgk"
 UIManager="*uid://ox3ltddar7yf"
 AudioManager="*uid://d1dnuvrtcub3r"
 Utils="*uid://c8yggw4v26muj"
 GlobalSignal="*uid://chewj8yelx0b2"
-RemoteConfig="*uid://3wkjg88cjeep"
 
 [display]
 

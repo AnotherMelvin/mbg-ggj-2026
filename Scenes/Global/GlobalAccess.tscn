@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://whafxk35mxks"]
+
+[ext_resource type="Script" uid="uid://cpwnmuculy3ts" path="res://Scripts/Global/GlobalAccess.gd" id="1_3wcpu"]
+
+[node name="GlobalAccess" type="Node" unique_id=2057276537]
+script = ExtResource("1_3wcpu")
