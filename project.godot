@@ -20,6 +20,13 @@ config/icon="res://icon.svg"
 Utility="*uid://c8yggw4v26muj"
 AudioManager="*uid://d1dnuvrtcub3r"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/mode=3
+window/size/resizable=false
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
