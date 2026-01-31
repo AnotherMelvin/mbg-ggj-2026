@@ -1,17 +1,23 @@
 extends Node
 
+enum UI_NAME_TYPE {
+	DEFAULT
+}
+
 enum SOUND_EFFECT_TYPE {
-	BASE
+	DEFAULT
 }
 
 enum SCENE_NAME_TYPE
 {
+	DEFAULT,
 	DEBUG,
 	MAIN
 }
 
 enum SCENE_TRANSITION_TYPE
 {
+	DEFAULT,
 	FADE
 }
 

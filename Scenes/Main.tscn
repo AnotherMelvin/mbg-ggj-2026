@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://b4m55ui8f3xf7"]
 
+[ext_resource type="Script" uid="uid://3eebcu2uw0mi" path="res://Scripts/Main.gd" id="1_r150o"]
+[ext_resource type="PackedScene" uid="uid://gflctvoh33db" path="res://Scenes/UI_Test.tscn" id="2_idj7w"]
+
 [node name="Node3D" type="Node3D" unique_id=163014605]
+script = ExtResource("1_r150o")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1903703688]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=545874831]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=321849844]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.797797)
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2115839873]
+
+[node name="Control" parent="CanvasLayer" unique_id=1120223853 instance=ExtResource("2_idj7w")]

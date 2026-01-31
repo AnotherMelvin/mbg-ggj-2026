@@ -20,7 +20,9 @@ config/icon="res://icon.svg"
 RemoteConfig="*uid://3wkjg88cjeep"
 AudioManager="*uid://d1dnuvrtcub3r"
 SceneManager="*uid://dqhj0tb6vxlgk"
-Utility="*uid://c8yggw4v26muj"
+UIManager="*uid://ox3ltddar7yf"
+Utils="*uid://c8yggw4v26muj"
+GlobalSignal="*uid://chewj8yelx0b2"
 
 [display]
 

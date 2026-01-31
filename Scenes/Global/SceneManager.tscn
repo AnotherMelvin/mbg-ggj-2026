@@ -8,7 +8,7 @@ length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("Overlay:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -37,7 +37,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("Overlay:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -57,7 +57,7 @@ _data = {
 layer = 999
 script = ExtResource("1_m76si")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1271426455]
+[node name="Overlay" type="ColorRect" parent="." unique_id=1271426455]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

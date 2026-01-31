@@ -6,8 +6,8 @@ extends Node3D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	RemoteConfig.config_updated.connect(_on_config_updated)
-	SceneManager.transition_to(Utility.SCENE_NAME_TYPE.MAIN, Utility.SCENE_TRANSITION_TYPE.FADE)
-	AudioManager.create_audio(Utility.SOUND_EFFECT_TYPE.BASE)
+	SceneManager.transition_to(Utils.SCENE_NAME_TYPE.MAIN, Utils.SCENE_TRANSITION_TYPE.FADE)
+	AudioManager.create_audio(Utils.SOUND_EFFECT_TYPE.DEFAULT)
 
 func _on_config_updated() -> void:
 	game_title.text = RemoteConfig.get_value("title")
