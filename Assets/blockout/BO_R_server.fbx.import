@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://uo1rqhjr2md0"
-path="res://.godot/imported/BO_MC.fbx-293a8521d656bc2848c27cb549a55c8d.scn"
+uid="uid://d3srkibdcng5b"
+path="res://.godot/imported/BO_R_server.fbx-4bf9086eb4b9095dee2046e13e9dee8e.scn"
 
 [deps]
 
-source_file="res://Assets/BO_MC.fbx"
-dest_files=["res://.godot/imported/BO_MC.fbx-293a8521d656bc2848c27cb549a55c8d.scn"]
+source_file="res://Assets/blockout/BO_R_server.fbx"
+dest_files=["res://.godot/imported/BO_R_server.fbx-4bf9086eb4b9095dee2046e13e9dee8e.scn"]
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true
@@ -37,7 +37,15 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"materials": {
+"Material": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/blockout/R_server.tres",
+"use_external/path": "uid://4ho6rml8e3fc"
+}
+}
+}
 fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1

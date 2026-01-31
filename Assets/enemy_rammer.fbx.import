@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d3srkibdcng5b"
-path="res://.godot/imported/BO_R_server.fbx-7a3e68aeb62b54b854e6f1a2791a5e04.scn"
+uid="uid://dmwelk5s5v31d"
+path="res://.godot/imported/enemy_rammer.fbx-f52922ae99837fedcdf4d086dca49a08.scn"
 
 [deps]
 
-source_file="res://Assets/BO_R_server.fbx"
-dest_files=["res://.godot/imported/BO_R_server.fbx-7a3e68aeb62b54b854e6f1a2791a5e04.scn"]
+source_file="res://Assets/enemy_rammer.fbx"
+dest_files=["res://.godot/imported/enemy_rammer.fbx-f52922ae99837fedcdf4d086dca49a08.scn"]
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true
@@ -39,10 +39,10 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"Material": {
+"tx_baddie": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://Assets/R_server.tres",
-"use_external/path": "uid://4ho6rml8e3fc"
+"use_external/fallback_path": "res://Assets/mat_baddie.tres",
+"use_external/path": "uid://bo1a00kcpusme"
 }
 }
 }
