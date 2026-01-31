@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bo1a00kcpusme"]
+
+[ext_resource type="Texture2D" uid="uid://b2qrmtpuyp7ro" path="res://Assets/tx_baddieB.png" id="1_fbtkp"]
+
+[resource]
+shading_mode = 2
+albedo_texture = ExtResource("1_fbtkp")
+texture_filter = 0
