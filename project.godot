@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="MBG-GGJ-2026"
+run/main_scene="uid://d1dnuvrtcub3r"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Utility="*uid://c8yggw4v26muj"
+AudioManager="*uid://d1dnuvrtcub3r"
 
 [physics]
 
