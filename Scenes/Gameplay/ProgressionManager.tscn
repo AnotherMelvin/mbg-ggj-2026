@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dewhlp7xil6cp"]
+
+[ext_resource type="Script" uid="uid://tobx7s3wwx34" path="res://Scripts/Gameplay/ProgressionManager.gd" id="1_nhw4m"]
+
+[node name="ProgressionManager" type="Node" unique_id=474437570]
+script = ExtResource("1_nhw4m")
+
+[node name="Timer" type="Timer" parent="." unique_id=1393887929]
+one_shot = true
