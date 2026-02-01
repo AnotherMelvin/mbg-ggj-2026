@@ -6,11 +6,11 @@ signal config_updated
 # 1. DEFINE DEFAULTS
 # These values are used if the player is offline or the request fails
 var _params: Dictionary = {
-	"official_task_target_1": 0.0,
+	"official_task_target_1": 3.0,
   	"official_task_target_2": 0.0,
   	"official_task_target_3": 0.0,
   	"official_task_target_4": 0.0,
-  	"spy_task_target_1": 0.0,
+  	"spy_task_target_1": 3.0,
   	"spy_task_target_2": 0.0,
   	"spy_task_target_3": 0.0,
   	"spy_task_target_4": 0.0,
@@ -18,10 +18,11 @@ var _params: Dictionary = {
   	"suspicion_limit_2": 0.0,
   	"suspicion_limit_3": 0.0,
   	"suspicion_limit_4": 0.0,
-	"time_limit_1": 0.0,
+	"time_limit_1": 60.0,
   	"time_limit_2": 0.0,
   	"time_limit_3": 0.0,
   	"time_limit_4": 0.0,
+	"max_level": 1
 }
 
 # Replace this with your actual npoint.io URL

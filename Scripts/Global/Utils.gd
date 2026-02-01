@@ -25,6 +25,11 @@ const SCENE_TRANSITION_FADE = "Fade"
 
 const DEBUG_SCENE_PATH = "res://Scenes/Debug.tscn"
 const MAIN_SCENE_PATH = "res://Scenes/Main.tscn"
+const INIT_SCENE_PATH = "res://Scenes/Production/init.tscn"
+const MAINMENU_SCENE_PATH = "res://Scenes/Production/MainMenu.tscn"
+const CREDITS_SCENE_PATH = "res://Scenes/Production/Credits.tscn"
+const GAME_SCENE_PATH = "res://Scenes/Production/Game.tscn"
+const EPILOGUE_SCENE_PATH = "res://Scenes/Production/Epilogue.tscn"
 
 var rng = RandomNumberGenerator.new()
 func get_rng(min_value: float, max_value: float) -> float:
