@@ -8,6 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://dlm77iyxdnh52" path="res://Assets/Bots/bot_server.glb" id="3_gpb1y"]
 [ext_resource type="PackedScene" uid="uid://cji80fglyk425" path="res://Assets/blockout/BO_R_warehouse.fbx" id="4_8kub2"]
 [ext_resource type="PackedScene" uid="uid://ctyx3ipc8j0oe" path="res://Assets/Bots/bot_warehouse.glb" id="4_v03ri"]
+[ext_resource type="PackedScene" uid="uid://n0tfx6lxclo2" path="res://Assets/envi/R_archive.fbx" id="9_vxeb4"]
+[ext_resource type="PackedScene" uid="uid://djgqxic2gsb8" path="res://Assets/envi/archive_blue.fbx" id="10_sb203"]
+[ext_resource type="PackedScene" uid="uid://dmotqxkw252jl" path="res://Assets/envi/archive_green.fbx" id="11_4wyk0"]
+[ext_resource type="PackedScene" uid="uid://b4n0yjd8seogn" path="res://Assets/envi/archive_red.fbx" id="12_l80s3"]
 
 [node name="Node3D" type="Node3D" unique_id=478515854]
 
@@ -50,9 +54,18 @@ fov = 40.5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.004222, 0, 0)
 
 [node name="bot_server2" parent="." unique_id=1812401655 instance=ExtResource("3_gpb1y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.91620684, 0, 0)
 
 [node name="bot_warehouse2" parent="." unique_id=2129923952 instance=ExtResource("4_v03ri")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.242223, 0, 0)
 
 [node name="bot_kitchen2" parent="." unique_id=958244472 instance=ExtResource("2_vxeb4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5795703, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3637204, 0, 0)
+
+[node name="R_archive" parent="." unique_id=522024316 instance=ExtResource("9_vxeb4")]
+
+[node name="archive_blue" parent="." unique_id=607206317 instance=ExtResource("10_sb203")]
+
+[node name="archive_green" parent="." unique_id=2001648968 instance=ExtResource("11_4wyk0")]
+
+[node name="archive_red" parent="." unique_id=957886642 instance=ExtResource("12_l80s3")]
