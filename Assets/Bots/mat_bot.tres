@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://clkiqatsise87"]
+
+[ext_resource type="Texture2D" uid="uid://dlayy6kx0rjnu" path="res://Assets/Bots/tex_bot.png" id="1_c5cnu"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.925
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("1_c5cnu")
