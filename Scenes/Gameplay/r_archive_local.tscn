@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bbnoxiojl367w"]
+
+[ext_resource type="PackedScene" uid="uid://n0tfx6lxclo2" path="res://Assets/envi/R_archive.fbx" id="1_bh88k"]
+
+[node name="R_archive" unique_id=1782286338 instance=ExtResource("1_bh88k")]
+
+[node name="R_archive" parent="." index="0" unique_id=1764878375]
+layers = 64

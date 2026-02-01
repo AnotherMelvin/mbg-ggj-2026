@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://blwfykc787llq" path="res://Assets/blockout/BO_R_archive_collision.tscn" id="8_hjhdi"]
 [ext_resource type="PackedScene" uid="uid://cc4lmfodkws6q" path="res://Scenes/Gameplay/Player.tscn" id="9_hjhdi"]
 [ext_resource type="Texture2D" uid="uid://bc8qhryfpmgtx" path="res://Assets/Texture/CameraFrame.png" id="9_hoxc8"]
+[ext_resource type="PackedScene" uid="uid://bbnoxiojl367w" path="res://Scenes/Gameplay/r_archive_local.tscn" id="9_xkysy"]
 [ext_resource type="Texture2D" uid="uid://dj00tkwpeckx8" path="res://Assets/Texture/TaskList.png" id="10_heveu"]
 [ext_resource type="PackedScene" uid="uid://dyndbqw4h0nnq" path="res://Scenes/Gameplay/RobotPath.tscn" id="10_in6fb"]
 [ext_resource type="PackedScene" uid="uid://1gxtoj4th6ht" path="res://Scenes/Gameplay/Enemy.tscn" id="10_rerxj"]
@@ -64,6 +65,47 @@ environment = SubResource("Environment_hoxc8")
 [node name="BO_R_archive" parent="WorldEnvironment" unique_id=1249046529 instance=ExtResource("8_hjhdi")]
 layers = 64
 
+[node name="BoxCollision" parent="WorldEnvironment/BO_R_archive" index="1" unique_id=152994120]
+transform = Transform3D(1.1631217, 0, 0, 0, 1, 0, 0, 0, 0.72563386, 4.990614, 0, 3.316671)
+
+[node name="BoxCollision2" parent="WorldEnvironment/BO_R_archive" index="2" unique_id=894352748]
+transform = Transform3D(1.1381184, 0, 0, 0, 1, 0, 0, 0, 0.72211707, 0.005186081, 0, 3.316671)
+
+[node name="BoxCollision3" parent="WorldEnvironment/BO_R_archive" index="3" unique_id=1242570255]
+transform = Transform3D(1.1400244, 0, 0, 0, 1, 0, 0, 0, 0.7503235, -4.9525127, 0, 3.316671)
+
+[node name="BoxCollision4" parent="WorldEnvironment/BO_R_archive" index="4" unique_id=1788977187]
+transform = Transform3D(1.1727659, 0, 0, 0, 1, 0, 0, 0, 0.8053603, 0.006934166, 0, -1.4417672)
+
+[node name="BoxCollision12" type="CSGBox3D" parent="WorldEnvironment/BO_R_archive" unique_id=1762688551]
+transform = Transform3D(0.7765862, 0, 0, 0, 1, 0, 0, 0, 1.4885252, -6.791576, 0, -1.4417672)
+visible = false
+use_collision = true
+size = Vector3(2.934906, 1, 2.3849335)
+
+[node name="BoxCollision5" parent="WorldEnvironment/BO_R_archive" index="6" unique_id=59142746]
+transform = Transform3D(1.3013808, 0, 0, 0, 1, 0, 0, 0, 1.1984015, 0.006934166, 0, -6.606569)
+
+[node name="BoxCollision6" parent="WorldEnvironment/BO_R_archive" index="7" unique_id=1215501171]
+transform = Transform3D(1.3221425, 0, 0, 0, 1, 0, 0, 0, 1.2381642, -4.3464966, 0, -6.639024)
+
+[node name="BoxCollision7" parent="WorldEnvironment/BO_R_archive" index="8" unique_id=37234224]
+transform = Transform3D(1.2725238, 0, 0, 0, 1, 0, 0, 0, 1.233549, 4.286909, 0, -6.6364536)
+
+[node name="BoxCollision8" parent="WorldEnvironment/BO_R_archive" index="9" unique_id=832636320]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0068540573, 0, -8.173764)
+
+[node name="BoxCollision9" parent="WorldEnvironment/BO_R_archive" index="10" unique_id=223707031]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0068540573, 0, 7.0606556)
+
+[node name="BoxCollision10" parent="WorldEnvironment/BO_R_archive" index="11" unique_id=1566782855]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.469128, 0, -1.0523496)
+
+[node name="BoxCollision11" parent="WorldEnvironment/BO_R_archive" index="12" unique_id=2110791558]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.524063, 0, -1.0523496)
+
+[node name="R_archive2" parent="WorldEnvironment" unique_id=1782286338 instance=ExtResource("9_xkysy")]
+
 [node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment" unique_id=1170449062]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9960995, 4.0426235, 0)
 light_color = Color(0.7192194, 0.27638942, 0.7036016, 1)
@@ -87,10 +129,10 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -
 
 [node name="Enemy_1" parent="WorldEnvironment" unique_id=1591003873 node_paths=PackedStringArray("pathways") instance=ExtResource("10_rerxj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0714025, 1.474, 0.2615024)
-pathways = [NodePath("../RobotPaths_1/RobotPath_1"), NodePath("../RobotPaths_1/RobotPath_2"), NodePath("../RobotPaths_1/RobotPath_3"), NodePath("../RobotPaths_1/RobotPath_4"), NodePath("../RobotPaths_1/RobotPath_5"), NodePath("../RobotPaths_1/RobotPath_6"), NodePath("../RobotPaths_1/RobotPath_7"), NodePath("../RobotPaths_1/RobotPath_8"), NodePath("../RobotPaths_1/RobotPath_9"), NodePath("../RobotPaths_1/RobotPath_10")]
+pathways = [NodePath("../RobotPaths_1/RobotPath_1"), NodePath("../RobotPaths_1/RobotPath_2"), NodePath("../RobotPaths_1/RobotPath_3"), NodePath("../RobotPaths_1/RobotPath_4"), NodePath("../RobotPaths_1/RobotPath_11"), NodePath("../RobotPaths_1/RobotPath_5"), NodePath("../RobotPaths_1/RobotPath_6"), NodePath("../RobotPaths_1/RobotPath_7"), NodePath("../RobotPaths_1/RobotPath_8"), NodePath("../RobotPaths_1/RobotPath_9"), NodePath("../RobotPaths_1/RobotPath_10")]
 
 [node name="Enemy_2" parent="WorldEnvironment" unique_id=1431108404 node_paths=PackedStringArray("pathways") instance=ExtResource("10_rerxj")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6.071577, 1.474, -2.2083359)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.759489, 1.474, -2.2083359)
 type = 1
 pathways = [NodePath("../RobotPaths_2/RobotPath_1"), NodePath("../RobotPaths_2/RobotPath_2"), NodePath("../RobotPaths_2/RobotPath_3"), NodePath("../RobotPaths_2/RobotPath_4"), NodePath("../RobotPaths_2/RobotPath_5"), NodePath("../RobotPaths_2/RobotPath_6"), NodePath("../RobotPaths_2/RobotPath_7"), NodePath("../RobotPaths_2/RobotPath_8")]
 
@@ -106,11 +148,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012426853, 0, -5.3208833)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7824965, 0, -5.3208833)
 
 [node name="RobotPath_4" parent="WorldEnvironment/RobotPaths_1" unique_id=343730086 instance=ExtResource("10_in6fb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9341526, 0, 0.4296825)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.777652, 0, 1.3527691)
+wait_time = 0.0
+
+[node name="RobotPath_11" parent="WorldEnvironment/RobotPaths_1" unique_id=1154712743 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3533297, 0, 1.3527691)
 wait_time = 0.0
 
 [node name="RobotPath_5" parent="WorldEnvironment/RobotPaths_1" unique_id=2008576224 instance=ExtResource("10_in6fb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9341526, 0, 5.141533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.474942, 0, 5.141533)
 wait_time = 0.0
 
 [node name="RobotPath_6" parent="WorldEnvironment/RobotPaths_1" unique_id=387683075 instance=ExtResource("10_in6fb")]
@@ -123,7 +169,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012426853, 0, 5.141533)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.770083, 0, 5.141533)
 
 [node name="RobotPath_9" parent="WorldEnvironment/RobotPaths_1" unique_id=1330569969 instance=ExtResource("10_in6fb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0601754, 0, 5.141533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.369269, 0, 5.141533)
 wait_time = 0.0
 
 [node name="RobotPath_10" parent="WorldEnvironment/RobotPaths_1" unique_id=1654523468 instance=ExtResource("10_in6fb")]
@@ -161,27 +207,27 @@ wait_time = 0.0
 [node name="Tasks" type="Node3D" parent="WorldEnvironment" unique_id=794450806]
 
 [node name="Archive_Fetch_Red" parent="WorldEnvironment/Tasks" unique_id=290512116 instance=ExtResource("12_cpklm")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -6.657341)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0.032456398, 0, -6.296897)
 available_task = ExtResource("5_cu1hc")
 
 [node name="Archive_Fetch_Blue" parent="WorldEnvironment/Tasks" unique_id=931396242 instance=ExtResource("12_cpklm")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -4.7982297, 0, -6.657341)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -4.295159, 0, -6.296897)
 available_task = ExtResource("13_gwra1")
 
 [node name="Archive_Fetch_Green" parent="WorldEnvironment/Tasks" unique_id=832237052 instance=ExtResource("12_cpklm")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 4.798229, 0, -6.6737165)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 4.3438435, 0, -6.3132725)
 available_task = ExtResource("14_d7jot")
 
 [node name="Archive_Save_Red" parent="WorldEnvironment/Tasks" unique_id=1339767815 instance=ExtResource("12_cpklm")]
-transform = Transform3D(3.215635, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 3.8248353)
+transform = Transform3D(3.215635, 0, 0, 0, 4, 0, 0, 0, 4, -5.124634, 0, 3.387052)
 available_task = ExtResource("6_hoxc8")
 
 [node name="Archive_Save_Blue" parent="WorldEnvironment/Tasks" unique_id=1632518194 instance=ExtResource("12_cpklm")]
-transform = Transform3D(3.4061594, 0, 0, 0, 4, 0, 0, 0, 4, 4.8226466, 0, 3.8195753)
+transform = Transform3D(3.4061594, 0, 0, 0, 4, 0, 0, 0, 4, 0.007036686, 0, 3.381792)
 available_task = ExtResource("15_d7jot")
 
 [node name="Archive_Save_Green" parent="WorldEnvironment/Tasks" unique_id=1623201843 instance=ExtResource("12_cpklm")]
-transform = Transform3D(3.2942762, 0, 0, 0, 4, 0, 0, 0, 4, -4.7825756, 0, 3.874608)
+transform = Transform3D(3.2942762, 0, 0, 0, 4, 0, 0, 0, 4, 5.2349253, 0, 3.4368248)
 available_task = ExtResource("16_xkysy")
 
 [node name="Archive_Shred" parent="WorldEnvironment/Tasks" unique_id=1867222573 instance=ExtResource("12_cpklm")]
@@ -310,4 +356,5 @@ grow_vertical = 2
 texture = ExtResource("10_heveu")
 expand_mode = 1
 
+[editable path="WorldEnvironment/BO_R_archive"]
 [editable path="WorldEnvironment/Player"]

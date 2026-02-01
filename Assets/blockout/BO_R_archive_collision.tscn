@@ -8,6 +8,7 @@ size = Vector3(20, 0, 15)
 [node name="BO_R_archive" unique_id=1249046529 instance=ExtResource("1_yfds1")]
 
 [node name="R_archive" parent="." index="0" unique_id=1577290322]
+visible = false
 layers = 64
 
 [node name="BoxCollision" type="CSGBox3D" parent="." index="1" unique_id=152994120]
