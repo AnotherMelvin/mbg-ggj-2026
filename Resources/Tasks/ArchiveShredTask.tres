@@ -6,4 +6,5 @@
 script = ExtResource("1_evy6r")
 type = 3
 duration = 5.0
+is_spy_task = true
 metadata/_custom_type_script = "uid://dvyvf83vi4vx5"

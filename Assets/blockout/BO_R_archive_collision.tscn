@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://blwfykc787llq"]
+
+[ext_resource type="PackedScene" uid="uid://de5pi0emygggu" path="res://Assets/blockout/BO_R_archive.fbx" id="1_yfds1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yfds1"]
+size = Vector3(20, 0, 15)
+
+[node name="BO_R_archive" unique_id=1249046529 instance=ExtResource("1_yfds1")]
+
+[node name="R_archive" parent="." index="0" unique_id=1577290322]
+layers = 64
+
+[node name="BoxCollision" type="CSGBox3D" parent="." index="1" unique_id=152994120]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7870293, 0, 3.316671)
+visible = false
+use_collision = true
+size = Vector3(2.8358154, 1, 2.1429138)
+
+[node name="BoxCollision2" type="CSGBox3D" parent="." index="2" unique_id=894352748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005186081, 0, 3.316671)
+visible = false
+use_collision = true
+size = Vector3(2.8358154, 1, 2.1429138)
+
+[node name="BoxCollision3" type="CSGBox3D" parent="." index="3" unique_id=1242570255]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.776657, 0, 3.316671)
+visible = false
+use_collision = true
+size = Vector3(2.8358154, 1, 2.1429138)
+
+[node name="BoxCollision4" type="CSGBox3D" parent="." index="4" unique_id=1788977187]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006934166, 0, -1.4417672)
+visible = false
+use_collision = true
+size = Vector3(2.934906, 1, 2.3849335)
+
+[node name="BoxCollision5" type="CSGBox3D" parent="." index="5" unique_id=59142746]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006934166, 0, -7.2232337)
+visible = false
+use_collision = true
+size = Vector3(2.934906, 1, 1.7686386)
+
+[node name="BoxCollision6" type="CSGBox3D" parent="." index="6" unique_id=1215501171]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7846537, 0, -7.2232337)
+visible = false
+use_collision = true
+size = Vector3(2.934906, 1, 1.7686386)
+
+[node name="BoxCollision7" type="CSGBox3D" parent="." index="7" unique_id=37234224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.779046, 0, -7.2232337)
+visible = false
+use_collision = true
+size = Vector3(2.934906, 1, 1.7686386)
+
+[node name="BoxCollision8" type="CSGBox3D" parent="." index="8" unique_id=832636320]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0068540573, 0, -7.93544)
+visible = false
+use_collision = true
+size = Vector3(17.952415, 1, 1.0321097)
+
+[node name="BoxCollision9" type="CSGBox3D" parent="." index="9" unique_id=223707031]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0068540573, 0, 6.0596924)
+visible = false
+use_collision = true
+size = Vector3(17.952415, 1, 1.0321097)
+
+[node name="BoxCollision10" type="CSGBox3D" parent="." index="10" unique_id=1566782855]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.026482, 0, -1.0523496)
+visible = false
+use_collision = true
+size = Vector3(15.971746, 1, 1.0321097)
+
+[node name="BoxCollision11" type="CSGBox3D" parent="." index="11" unique_id=2110791558]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.992884, 0, -1.0523496)
+visible = false
+use_collision = true
+size = Vector3(15.971746, 1, 1.0321097)
+
+[node name="Ground" type="StaticBody3D" parent="." index="12" unique_id=1295603021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" index="0" unique_id=1527199604]
+shape = SubResource("BoxShape3D_yfds1")
+debug_fill = false

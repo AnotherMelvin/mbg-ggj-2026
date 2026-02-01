@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dyndbqw4h0nnq"]
+
+[ext_resource type="Script" uid="uid://bdnhpue0rmrvt" path="res://Scripts/Gameplay/RobotPath.gd" id="1_gelk2"]
+
+[node name="RobotPath" type="Node3D" unique_id=752577530]
+script = ExtResource("1_gelk2")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1747543959]
+transform = Transform3D(0.13739794, 0, 0, 0, 0.13999414, 0, 0, 0, 1, 0, 0, 0)
+layers = 32
+size = Vector3(1, 1, 0.47631836)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=624715336]
+transform = Transform3D(0.29, 0, 0, 0, 0.29, 0, 0, 0, 0.29, 0, 0, -0.28662276)
+layers = 32
+rings = 60

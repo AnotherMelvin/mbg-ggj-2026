@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://1gxtoj4th6ht"]
+
+[ext_resource type="Script" uid="uid://11btah808tow" path="res://Scripts/Gameplay/PathfindingCharacterController.gd" id="1_d0ta6"]
+[ext_resource type="PackedScene" uid="uid://cqqsd4hnp5reu" path="res://Scenes/Gameplay/EnemyAreaTrigger.tscn" id="2_uoayo"]
+[ext_resource type="PackedScene" uid="uid://dkooycpybc7rv" path="res://Assets/Bots/bot_archive_local.tscn" id="3_d0ta6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r8vti"]
+
+[node name="Enemy" type="CharacterBody3D" unique_id=1591003873]
+script = ExtResource("1_d0ta6")
+max_speed = 8.0
+acceleration = 20.0
+turn_speed = 8.0
+
+[node name="EnemyAreaTrigger" parent="." unique_id=290512116 instance=ExtResource("2_uoayo")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, -1, -2.1553037)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=653015248]
+shape = SubResource("CapsuleShape3D_r8vti")
+
+[node name="bot_archive_local" parent="." unique_id=355290492 instance=ExtResource("3_d0ta6")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -1.5, 0)

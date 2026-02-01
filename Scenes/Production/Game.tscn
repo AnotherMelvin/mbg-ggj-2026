@@ -4,13 +4,31 @@
 [ext_resource type="PackedScene" uid="uid://c4jg7tbxyvgrf" path="res://Scenes/Gameplay/TaskManager.tscn" id="2_5k4bo"]
 [ext_resource type="Script" uid="uid://bd8y727i1b38m" path="res://Scripts/Gameplay/TaskManager.gd" id="3_nnrb0"]
 [ext_resource type="Script" uid="uid://sxhqxlbkjidj" path="res://Scripts/Base/BaseTask.gd" id="4_4w4pd"]
-[ext_resource type="Resource" uid="uid://w8vhl1682eyl" path="res://Resources/Tasks/ArchiveFetchTask.tres" id="5_cu1hc"]
-[ext_resource type="Resource" uid="uid://dxd3c81c8bofn" path="res://Resources/Tasks/ArchiveSaveTask.tres" id="6_hoxc8"]
+[ext_resource type="Resource" uid="uid://w8vhl1682eyl" path="res://Resources/Tasks/ArchiveFetchTask_Red.tres" id="5_cu1hc"]
+[ext_resource type="Resource" uid="uid://dxd3c81c8bofn" path="res://Resources/Tasks/ArchiveSaveTask_Red.tres" id="6_hoxc8"]
 [ext_resource type="Resource" uid="uid://c83x2ka3rjyon" path="res://Resources/Tasks/ArchiveShredTask.tres" id="7_heveu"]
-[ext_resource type="PackedScene" uid="uid://de5pi0emygggu" path="res://Assets/blockout/BO_R_archive.fbx" id="8_cu1hc"]
+[ext_resource type="PackedScene" uid="uid://blwfykc787llq" path="res://Assets/blockout/BO_R_archive_collision.tscn" id="8_hjhdi"]
+[ext_resource type="PackedScene" uid="uid://cc4lmfodkws6q" path="res://Scenes/Gameplay/Player.tscn" id="9_hjhdi"]
+[ext_resource type="Texture2D" uid="uid://bc8qhryfpmgtx" path="res://Assets/Texture/CameraFrame.png" id="9_hoxc8"]
+[ext_resource type="Texture2D" uid="uid://dj00tkwpeckx8" path="res://Assets/Texture/TaskList.png" id="10_heveu"]
+[ext_resource type="PackedScene" uid="uid://dyndbqw4h0nnq" path="res://Scenes/Gameplay/RobotPath.tscn" id="10_in6fb"]
+[ext_resource type="PackedScene" uid="uid://1gxtoj4th6ht" path="res://Scenes/Gameplay/Enemy.tscn" id="10_rerxj"]
+[ext_resource type="Texture2D" uid="uid://v80ybig5xe54" path="res://Assets/Texture/POV.png" id="12_in6fb"]
 
 [sub_resource type="Environment" id="Environment_hoxc8"]
 background_mode = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hjhdi"]
+size = Vector3(20, 0, 15)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_heveu"]
+bg_color = Color(0.12156863, 0.03137255, 0.16862746, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_78202"]
+viewport_path = NodePath("GameViewPort")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_rerxj"]
+viewport_path = NodePath("PlayerViewPort")
 
 [node name="Game" type="Node3D" unique_id=1108347675]
 
@@ -22,13 +40,27 @@ background_mode = 1
 script = ExtResource("3_nnrb0")
 tasks_list = Array[ExtResource("4_4w4pd")]([ExtResource("5_cu1hc"), ExtResource("6_hoxc8"), ExtResource("7_heveu")])
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=775310628]
-transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49999997, 0, 13.5, 6.5)
+[node name="GameViewPort" type="SubViewport" parent="." unique_id=479162437]
+size = Vector2i(799, 620)
+
+[node name="GameCamera" type="Camera3D" parent="GameViewPort" unique_id=775310628]
+transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.7071068, 0, 25.132019, 22.99691)
+cull_mask = 1048543
+fov = 30.0
+
+[node name="PlayerViewPort" type="SubViewport" parent="." unique_id=906344273]
+size = Vector2i(194, 279)
+
+[node name="PlayerCamera" type="Camera3D" parent="PlayerViewPort" unique_id=680726781]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.2041831, -2.4126735)
+cull_mask = 1048479
+fov = 30.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1883427065]
 environment = SubResource("Environment_hoxc8")
 
-[node name="BO_R_archive" parent="WorldEnvironment" unique_id=1249046529 instance=ExtResource("8_cu1hc")]
+[node name="BO_R_archive" parent="WorldEnvironment" unique_id=1249046529 instance=ExtResource("8_hjhdi")]
+layers = 64
 
 [node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment" unique_id=1170449062]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9960995, 4.0426235, 0)
@@ -44,6 +76,94 @@ light_energy = 50.0
 light_volumetric_fog_energy = 0.0
 omni_range = 10.0
 
+[node name="Player" parent="WorldEnvironment" unique_id=1717530107 node_paths=PackedStringArray("player_camera") instance=ExtResource("9_hjhdi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4737391, 1)
+player_camera = NodePath("../../PlayerViewPort/PlayerCamera")
+
+[node name="CameraHandler" type="Node3D" parent="WorldEnvironment/Player" unique_id=518269846]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.75, -4)
+
+[node name="Enemy_1" parent="WorldEnvironment" unique_id=1591003873 node_paths=PackedStringArray("pathways") instance=ExtResource("10_rerxj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0714025, 1.474, 0.2615024)
+pathways = [NodePath("../RobotPaths_1/RobotPath_1"), NodePath("../RobotPaths_1/RobotPath_2"), NodePath("../RobotPaths_1/RobotPath_3"), NodePath("../RobotPaths_1/RobotPath_4"), NodePath("../RobotPaths_1/RobotPath_5"), NodePath("../RobotPaths_1/RobotPath_6"), NodePath("../RobotPaths_1/RobotPath_7"), NodePath("../RobotPaths_1/RobotPath_8"), NodePath("../RobotPaths_1/RobotPath_9"), NodePath("../RobotPaths_1/RobotPath_10")]
+
+[node name="RobotPaths_1" type="Node" parent="WorldEnvironment" unique_id=1893008804]
+
+[node name="RobotPath_1" parent="WorldEnvironment/RobotPaths_1" unique_id=752577530 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.770083, 0, -5.3208833)
+
+[node name="RobotPath_2" parent="WorldEnvironment/RobotPaths_1" unique_id=674790979 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012426853, 0, -5.3208833)
+
+[node name="RobotPath_3" parent="WorldEnvironment/RobotPaths_1" unique_id=13944840 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7824965, 0, -5.3208833)
+
+[node name="RobotPath_4" parent="WorldEnvironment/RobotPaths_1" unique_id=343730086 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9341526, 0, 0.4296825)
+wait_time = 0.0
+
+[node name="RobotPath_5" parent="WorldEnvironment/RobotPaths_1" unique_id=2008576224 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9341526, 0, 5.141533)
+wait_time = 0.0
+
+[node name="RobotPath_6" parent="WorldEnvironment/RobotPaths_1" unique_id=387683075 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7824965, 0, 5.141533)
+
+[node name="RobotPath_7" parent="WorldEnvironment/RobotPaths_1" unique_id=1861033685 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012426853, 0, 5.141533)
+
+[node name="RobotPath_8" parent="WorldEnvironment/RobotPaths_1" unique_id=1926473257 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.770083, 0, 5.141533)
+
+[node name="RobotPath_9" parent="WorldEnvironment/RobotPaths_1" unique_id=1330569969 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0601754, 0, 5.141533)
+wait_time = 0.0
+
+[node name="RobotPath_10" parent="WorldEnvironment/RobotPaths_1" unique_id=1654523468 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0601754, 0, 0.40449095)
+wait_time = 0.0
+
+[node name="RobotPaths_2" type="Node" parent="WorldEnvironment" unique_id=78168767]
+
+[node name="RobotPath" parent="WorldEnvironment/RobotPaths_2" unique_id=1403458801 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.770083, 0, -5.3208833)
+visible = false
+
+[node name="RobotPath2" parent="WorldEnvironment/RobotPaths_2" unique_id=982260376 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012426853, 0, -5.3208833)
+visible = false
+
+[node name="RobotPath3" parent="WorldEnvironment/RobotPaths_2" unique_id=756030708 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7824965, 0, -5.3208833)
+visible = false
+
+[node name="RobotPath4" parent="WorldEnvironment/RobotPaths_2" unique_id=305449520 instance=ExtResource("10_in6fb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.770083, 0, 1.6135483)
+visible = false
+
+[node name="RobotPath9" parent="WorldEnvironment/RobotPaths_2" unique_id=484532741 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3570757, 0, -1.9530425)
+visible = false
+
+[node name="RobotPath5" parent="WorldEnvironment/RobotPaths_2" unique_id=1016444376 instance=ExtResource("10_in6fb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.012426853, 0, 1.6135483)
+visible = false
+
+[node name="RobotPath6" parent="WorldEnvironment/RobotPaths_2" unique_id=421327794 instance=ExtResource("10_in6fb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.7824965, 0, 1.6135483)
+visible = false
+
+[node name="RobotPath8" parent="WorldEnvironment/RobotPaths_2" unique_id=972999183 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4108152, 0, -1.9909306)
+visible = false
+wait_time = 0.0
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=1565348839]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1374112065]
+shape = SubResource("BoxShape3D_hjhdi")
+debug_fill = false
+
 [node name="UI" type="Control" parent="." unique_id=1276026679]
 layout_mode = 3
 anchors_preset = 15
@@ -51,3 +171,106 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background" type="Panel" parent="UI" unique_id=250474910]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_heveu")
+
+[node name="GameCameraView" type="TextureRect" parent="UI" unique_id=953448224]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -308.0
+offset_right = 399.0
+offset_bottom = 312.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_78202")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="CameraFrame" type="TextureRect" parent="UI" unique_id=1286988947]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -399.0
+offset_top = -308.0
+offset_right = 400.0
+offset_bottom = 312.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_hoxc8")
+expand_mode = 1
+
+[node name="OfficialList" type="TextureRect" parent="UI" unique_id=1861017154]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 27.0
+offset_top = -193.0
+offset_right = 224.0
+offset_bottom = 49.0
+grow_vertical = 2
+texture = ExtResource("10_heveu")
+expand_mode = 1
+
+[node name="SpyList" type="TextureRect" parent="UI" unique_id=1317961750]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 27.0
+offset_top = 69.0
+offset_right = 224.0
+offset_bottom = 311.0
+grow_vertical = 2
+texture = ExtResource("10_heveu")
+expand_mode = 1
+
+[node name="PlayerCameraView" type="TextureRect" parent="UI" unique_id=510902076]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = -308.0
+offset_right = 575.0
+offset_bottom = 312.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = SubResource("ViewportTexture_rerxj")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="PlayerFrame" type="TextureRect" parent="UI" unique_id=1969121391]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = -307.5
+offset_right = -30.0
+offset_bottom = -28.5
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("12_in6fb")
+expand_mode = 1
+
+[editable path="WorldEnvironment/Player"]

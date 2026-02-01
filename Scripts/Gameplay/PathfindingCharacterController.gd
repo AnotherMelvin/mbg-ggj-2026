@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 @export_group("References")
+@export var type: Utils.ENEMY_TYPE
 @export var pathways: Array[RobotPath] 
 
 @export_group("Movement Stats")
@@ -16,10 +17,28 @@ var _current_path_index: int = 0
 var _is_waiting: bool = false 
 
 func _ready() -> void:
+	RemoteConfig.config_updated.connect(_load_config)
+	_load_config()
+	
 	if pathways.is_empty():
 		set_physics_process(false)
 		return
 	current_path = pathways[0]
+
+func _load_config() -> void:
+	match type:
+		Utils.ENEMY_TYPE.ARCHIVE_1:
+			max_speed = RemoteConfig.get_value("enemy1_archive_max_speed")
+			acceleration = RemoteConfig.get_value("enemy1_archive_acceleration")
+			friction = RemoteConfig.get_value("enemy1_archive_friction")
+			turn_speed = RemoteConfig.get_value("enemy1_archive_turn_speed")
+			stopping_distance = RemoteConfig.get_value("enemy1_archive_stopping_distance")
+		Utils.ENEMY_TYPE.ARCHIVE_2:
+			max_speed = RemoteConfig.get_value("enemy2_archive_max_speed")
+			acceleration = RemoteConfig.get_value("enemy2_archive_acceleration")
+			friction = RemoteConfig.get_value("enemy2_archive_friction")
+			turn_speed = RemoteConfig.get_value("enemy2_archive_turn_speed")
+			stopping_distance = RemoteConfig.get_value("enemy2_archive_stopping_distance")
 
 func _physics_process(delta: float) -> void:
 	# 1. Apply Gravity

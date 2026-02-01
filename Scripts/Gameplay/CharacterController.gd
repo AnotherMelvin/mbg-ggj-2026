@@ -1,11 +1,32 @@
 extends CharacterBody3D
 
 # SETTINGS
+@export_group("References")
+@export var player_camera: Node3D
+
 @export_group("Movement Stats")
 @export var max_speed: float = 8.0
 @export var acceleration: float = 20.0
 @export var friction: float = 15.0 # How fast you stop when letting go
 @export var turn_speed: float = 8.0 # How fast the robot rotates (higher = snappier)
+
+@onready var camera_handler: Node3D = $CameraHandler
+
+
+func _ready() -> void:
+	RemoteConfig.config_updated.connect(_load_config)
+	_load_config()
+	
+func _load_config() -> void:
+	max_speed = RemoteConfig.get_value("player_archive_max_speed")
+	acceleration = RemoteConfig.get_value("player_archive_acceleration")
+	friction = RemoteConfig.get_value("player_archive_friction")
+	turn_speed = RemoteConfig.get_value("player_archive_turn_speed")
+			
+
+func _process(delta: float) -> void:
+	player_camera.global_position = player_camera.global_position.lerp(camera_handler.global_position, 0.1)
+	player_camera.look_at(global_position, Vector3.UP)
 
 func _physics_process(delta: float) -> void:
 	# 1. Apply Gravity

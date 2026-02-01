@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ArchiveFetchTask" format=3 uid="uid://bw0ni05scyvn2"]
+
+[ext_resource type="Script" uid="uid://dvyvf83vi4vx5" path="res://Scripts/Tasks/ArchiveFetchTask.gd" id="1_8ormj"]
+
+[resource]
+script = ExtResource("1_8ormj")
+type = 2
+condition = 2
+duration = 3.0
+metadata/_custom_type_script = "uid://dvyvf83vi4vx5"

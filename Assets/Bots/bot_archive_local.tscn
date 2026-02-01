@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dkooycpybc7rv"]
+
+[ext_resource type="PackedScene" uid="uid://43hmhavvd22c" path="res://Assets/Bots/bot_archive.glb" id="1_fjfa4"]
+
+[node name="bot_archive_local" unique_id=355290492 instance=ExtResource("1_fjfa4")]
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=1575422944]
+autoplay = &"idle"

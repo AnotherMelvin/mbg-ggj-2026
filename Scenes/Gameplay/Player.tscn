@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cc4lmfodkws6q"]
 
 [ext_resource type="Script" uid="uid://diiynush0lkut" path="res://Scripts/Gameplay/CharacterController.gd" id="1_8i8gy"]
-[ext_resource type="PackedScene" uid="uid://43hmhavvd22c" path="res://Assets/Bots/bot_archive.glb" id="2_mfqkv"]
+[ext_resource type="PackedScene" uid="uid://dkooycpybc7rv" path="res://Assets/Bots/bot_archive_local.tscn" id="2_8i8gy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5ya3b"]
 
@@ -13,5 +13,5 @@ script = ExtResource("1_8i8gy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.467497, 0)
 shape = SubResource("CapsuleShape3D_5ya3b")
 
-[node name="bot_archive2" parent="." unique_id=355290492 instance=ExtResource("2_mfqkv")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -1.5, 0)
+[node name="bot_archive_local" parent="." unique_id=355290492 instance=ExtResource("2_8i8gy")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, -1.5, 0)

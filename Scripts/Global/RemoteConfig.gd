@@ -26,6 +26,20 @@ var _params: Dictionary = {
 	"archive_fetch_duration": 0,
   	"archive_save_duration": 3.0,
   	"archive_shred_duration": 5.0,
+	"player_archive_max_speed": 8.0,
+  	"player_archive_acceleration": 20.0,
+  	"player_archive_friction": 8.0,
+  	"player_archive_turn_speed": 8.0,
+	"enemy1_archive_max_speed": 2.0,
+	"enemy1_archive_acceleration": 20.0,
+  	"enemy1_archive_friction": 8.0,
+  	"enemy1_archive_turn_speed": 2.0,
+	"enemy1_archive_stopping_distance": 0.5,
+	"enemy2_archive_max_speed": 2.0,
+  	"enemy2_archive_acceleration": 20.0,
+  	"enemy2_archive_friction": 2.0,
+  	"enemy2_archive_turn_speed": 8.0,
+	"enemy2_archive_stopping_distance": 0.5
 }
 
 # Replace this with your actual npoint.io URL

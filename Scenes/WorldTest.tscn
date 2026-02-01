@@ -2,12 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bdnhpue0rmrvt" path="res://Scripts/Gameplay/RobotPath.gd" id="1_r8vti"]
 [ext_resource type="PackedScene" uid="uid://cc4lmfodkws6q" path="res://Scenes/Gameplay/Player.tscn" id="2_hwc24"]
-[ext_resource type="Script" uid="uid://11btah808tow" path="res://Scripts/Gameplay/PathfindingCharacterController.gd" id="3_hkm8i"]
-[ext_resource type="PackedScene" uid="uid://43hmhavvd22c" path="res://Assets/Bots/bot_archive.glb" id="3_hwc24"]
-[ext_resource type="PackedScene" uid="uid://cqqsd4hnp5reu" path="res://Scenes/Gameplay/EnemyAreaTrigger.tscn" id="4_jxptq"]
+[ext_resource type="PackedScene" uid="uid://1gxtoj4th6ht" path="res://Scenes/Gameplay/Enemy.tscn" id="3_yyb55"]
 [ext_resource type="PackedScene" uid="uid://bsjxqe8jbhkdi" path="res://Scenes/Gameplay/TaskAreaTrigger.tscn" id="4_yyb55"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r8vti"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hwc24"]
 
@@ -48,22 +44,8 @@ script = ExtResource("1_r8vti")
 [node name="Player" parent="." unique_id=1717530107 instance=ExtResource("2_hwc24")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="Enemy" type="CharacterBody3D" parent="." unique_id=277613075 node_paths=PackedStringArray("pathways")]
+[node name="Enemy" parent="." unique_id=1591003873 instance=ExtResource("3_yyb55")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.254757, 1, 0)
-script = ExtResource("3_hkm8i")
-pathways = [NodePath("../Path"), NodePath("../Path2"), NodePath("../Path3"), NodePath("../Path4"), NodePath("../Path5")]
-max_speed = 8.0
-acceleration = 20.0
-turn_speed = 8.0
-
-[node name="EnemyAreaTrigger" parent="Enemy" unique_id=290512116 instance=ExtResource("4_jxptq")]
-transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, -1, -2)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy" unique_id=192587670]
-shape = SubResource("CapsuleShape3D_r8vti")
-
-[node name="bot_archive2" parent="Enemy" unique_id=427874161 instance=ExtResource("3_hwc24")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -1.5, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1906797739]
 transform = Transform3D(1, 0, 0, 0, -0.5855521, 0.8106348, 0, -0.8106348, -0.5855521, 0, 3, 6)

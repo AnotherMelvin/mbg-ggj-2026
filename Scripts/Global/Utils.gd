@@ -29,6 +29,20 @@ enum TASK_NAME_TYPE
 	ARCHIVE_SHRED
 }
 
+enum TASK_CONDITION_TYPE
+{
+	DEFAULT,
+	RED,
+	GREEN,
+	BLUE
+}
+
+enum ENEMY_TYPE
+{
+	ARCHIVE_1,
+	ARCHIVE_2
+}
+
 const SCENE_TRANSITION_FADE = "Fade"
 
 const DEBUG_SCENE_PATH = "res://Scenes/Debug.tscn"
