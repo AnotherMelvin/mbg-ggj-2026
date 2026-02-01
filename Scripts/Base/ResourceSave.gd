@@ -4,6 +4,7 @@ extends Resource
 const SAVE_PATH := "user://resource_save"
 
 @export var has_finished_ftue : bool
+@export var current_level : int
 
 func write_savegame() -> void:
 	ResourceSaver.save(self, get_save_path())
