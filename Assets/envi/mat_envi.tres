@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b1gkxsofi1g12"]
+
+[ext_resource type="Texture2D" uid="uid://sjr5dashohql" path="res://Assets/envi/tex_envi.png" id="1_ksdcu"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 1.0
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("1_ksdcu")
