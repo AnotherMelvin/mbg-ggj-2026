@@ -3,8 +3,11 @@
 [ext_resource type="Script" uid="uid://diiynush0lkut" path="res://Scripts/Gameplay/CharacterController.gd" id="1_chm0m"]
 [ext_resource type="Script" uid="uid://bdnhpue0rmrvt" path="res://Scripts/Gameplay/RobotPath.gd" id="1_r8vti"]
 [ext_resource type="Script" uid="uid://11btah808tow" path="res://Scripts/Gameplay/PathfindingCharacterController.gd" id="3_hkm8i"]
+[ext_resource type="PackedScene" uid="uid://43hmhavvd22c" path="res://Assets/Bots/bot_archive.glb" id="3_hwc24"]
 [ext_resource type="PackedScene" uid="uid://cqqsd4hnp5reu" path="res://Scenes/Gameplay/EnemyAreaTrigger.tscn" id="4_jxptq"]
 [ext_resource type="PackedScene" uid="uid://bsjxqe8jbhkdi" path="res://Scenes/Gameplay/TaskAreaTrigger.tscn" id="4_yyb55"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5ya3b"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r8vti"]
 
@@ -41,13 +44,11 @@ collision_layer = 17
 script = ExtResource("1_chm0m")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=945783936]
-shape = SubResource("CapsuleShape3D_r8vti")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.467497, 0)
+shape = SubResource("CapsuleShape3D_5ya3b")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Player/CollisionShape3D" unique_id=711879874]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5800097, -0.29174805)
-size = Vector3(1, 0.47644043, 0.51416016)
-
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Player" unique_id=1352466604]
+[node name="bot_archive2" parent="Player" unique_id=1369302695 instance=ExtResource("3_hwc24")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -1.5, 0)
 
 [node name="Enemy" type="CharacterBody3D" parent="." unique_id=277613075 node_paths=PackedStringArray("pathways")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.254757, 1, 0)
@@ -63,18 +64,15 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy" unique_id=192587670]
 shape = SubResource("CapsuleShape3D_r8vti")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Enemy/CollisionShape3D" unique_id=537797567]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5800097, -0.29174805)
-size = Vector3(1, 0.47644043, 0.51416016)
-
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Enemy" unique_id=669596877]
+[node name="bot_archive2" parent="Enemy" unique_id=427874161 instance=ExtResource("3_hwc24")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -1.5, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1906797739]
 transform = Transform3D(1, 0, 0, 0, -0.5855521, 0.8106348, 0, -0.8106348, -0.5855521, 0, 3, 6)
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1959024510]
-transform = Transform3D(1, 0, 0, 0, 0.8458675, 0.5333931, 0, -0.5333931, 0.8458675, 0, 8.953749, 14.37159)
+transform = Transform3D(1, 0, 0, 0, 0.65373766, 0.75672126, 0, -0.75672126, 0.65373766, 0, 16.208544, 10.791308)
 cull_mask = 1048543
 current = true
 
