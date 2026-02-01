@@ -18,7 +18,8 @@ emission = Color(2.6898527, 0.16781946, 4.124167e-06, 1)
 script = ExtResource("1_iujq1")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=2034945164]
-collision_mask = 16
+collision_layer = 32
+collision_mask = 32
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=679643271]
 shape = SubResource("SphereShape3D_1lfai")

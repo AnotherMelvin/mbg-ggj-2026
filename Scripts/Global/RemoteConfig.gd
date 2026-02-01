@@ -35,10 +35,10 @@ var _params: Dictionary = {
   	"enemy1_archive_friction": 8.0,
   	"enemy1_archive_turn_speed": 2.0,
 	"enemy1_archive_stopping_distance": 0.5,
-	"enemy2_archive_max_speed": 2.0,
+	"enemy2_archive_max_speed": 2.5,
   	"enemy2_archive_acceleration": 20.0,
-  	"enemy2_archive_friction": 2.0,
-  	"enemy2_archive_turn_speed": 8.0,
+  	"enemy2_archive_friction": 8.0,
+  	"enemy2_archive_turn_speed": 4.0,
 	"enemy2_archive_stopping_distance": 0.5
 }
 

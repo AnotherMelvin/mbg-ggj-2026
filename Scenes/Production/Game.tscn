@@ -13,13 +13,15 @@
 [ext_resource type="Texture2D" uid="uid://dj00tkwpeckx8" path="res://Assets/Texture/TaskList.png" id="10_heveu"]
 [ext_resource type="PackedScene" uid="uid://dyndbqw4h0nnq" path="res://Scenes/Gameplay/RobotPath.tscn" id="10_in6fb"]
 [ext_resource type="PackedScene" uid="uid://1gxtoj4th6ht" path="res://Scenes/Gameplay/Enemy.tscn" id="10_rerxj"]
+[ext_resource type="PackedScene" uid="uid://bsjxqe8jbhkdi" path="res://Scenes/Gameplay/TaskAreaTrigger.tscn" id="12_cpklm"]
 [ext_resource type="Texture2D" uid="uid://v80ybig5xe54" path="res://Assets/Texture/POV.png" id="12_in6fb"]
+[ext_resource type="Resource" uid="uid://b0wjw7r1hntn4" path="res://Resources/Tasks/ArchiveFetchTask_Blue.tres" id="13_gwra1"]
+[ext_resource type="Resource" uid="uid://jgxuc04rgfvl" path="res://Resources/Tasks/ArchiveFetchTask_Green.tres" id="14_d7jot"]
+[ext_resource type="Resource" uid="uid://b5orql8e8y6rd" path="res://Resources/Tasks/ArchiveSaveTask_Blue.tres" id="15_d7jot"]
+[ext_resource type="Resource" uid="uid://bw0ni05scyvn2" path="res://Resources/Tasks/ArchiveSaveTask_Green.tres" id="16_xkysy"]
 
 [sub_resource type="Environment" id="Environment_hoxc8"]
 background_mode = 1
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_hjhdi"]
-size = Vector3(20, 0, 15)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_heveu"]
 bg_color = Color(0.12156863, 0.03137255, 0.16862746, 1)
@@ -77,7 +79,7 @@ light_volumetric_fog_energy = 0.0
 omni_range = 10.0
 
 [node name="Player" parent="WorldEnvironment" unique_id=1717530107 node_paths=PackedStringArray("player_camera") instance=ExtResource("9_hjhdi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4737391, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3876514, 1.4737391, 3.3876517)
 player_camera = NodePath("../../PlayerViewPort/PlayerCamera")
 
 [node name="CameraHandler" type="Node3D" parent="WorldEnvironment/Player" unique_id=518269846]
@@ -87,7 +89,12 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0714025, 1.474, 0.2615024)
 pathways = [NodePath("../RobotPaths_1/RobotPath_1"), NodePath("../RobotPaths_1/RobotPath_2"), NodePath("../RobotPaths_1/RobotPath_3"), NodePath("../RobotPaths_1/RobotPath_4"), NodePath("../RobotPaths_1/RobotPath_5"), NodePath("../RobotPaths_1/RobotPath_6"), NodePath("../RobotPaths_1/RobotPath_7"), NodePath("../RobotPaths_1/RobotPath_8"), NodePath("../RobotPaths_1/RobotPath_9"), NodePath("../RobotPaths_1/RobotPath_10")]
 
-[node name="RobotPaths_1" type="Node" parent="WorldEnvironment" unique_id=1893008804]
+[node name="Enemy_2" parent="WorldEnvironment" unique_id=1431108404 node_paths=PackedStringArray("pathways") instance=ExtResource("10_rerxj")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6.071577, 1.474, -2.2083359)
+type = 1
+pathways = [NodePath("../RobotPaths_2/RobotPath_1"), NodePath("../RobotPaths_2/RobotPath_2"), NodePath("../RobotPaths_2/RobotPath_3"), NodePath("../RobotPaths_2/RobotPath_4"), NodePath("../RobotPaths_2/RobotPath_5"), NodePath("../RobotPaths_2/RobotPath_6"), NodePath("../RobotPaths_2/RobotPath_7"), NodePath("../RobotPaths_2/RobotPath_8")]
+
+[node name="RobotPaths_1" type="Node3D" parent="WorldEnvironment" unique_id=364848476]
 
 [node name="RobotPath_1" parent="WorldEnvironment/RobotPaths_1" unique_id=752577530 instance=ExtResource("10_in6fb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.770083, 0, -5.3208833)
@@ -123,46 +130,63 @@ wait_time = 0.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0601754, 0, 0.40449095)
 wait_time = 0.0
 
-[node name="RobotPaths_2" type="Node" parent="WorldEnvironment" unique_id=78168767]
+[node name="RobotPaths_2" type="Node3D" parent="WorldEnvironment" unique_id=1123220177]
 
-[node name="RobotPath" parent="WorldEnvironment/RobotPaths_2" unique_id=1403458801 instance=ExtResource("10_in6fb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.770083, 0, -5.3208833)
-visible = false
+[node name="RobotPath_1" parent="WorldEnvironment/RobotPaths_2" unique_id=421327794 instance=ExtResource("10_in6fb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.7824965, 0, 1.1457834)
 
-[node name="RobotPath2" parent="WorldEnvironment/RobotPaths_2" unique_id=982260376 instance=ExtResource("10_in6fb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012426853, 0, -5.3208833)
-visible = false
+[node name="RobotPath_2" parent="WorldEnvironment/RobotPaths_2" unique_id=1016444376 instance=ExtResource("10_in6fb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.012426853, 0, 1.1457834)
 
-[node name="RobotPath3" parent="WorldEnvironment/RobotPaths_2" unique_id=756030708 instance=ExtResource("10_in6fb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7824965, 0, -5.3208833)
-visible = false
+[node name="RobotPath_3" parent="WorldEnvironment/RobotPaths_2" unique_id=305449520 instance=ExtResource("10_in6fb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.770083, 0, 1.1457834)
 
-[node name="RobotPath4" parent="WorldEnvironment/RobotPaths_2" unique_id=305449520 instance=ExtResource("10_in6fb")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.770083, 0, 1.6135483)
-visible = false
-
-[node name="RobotPath9" parent="WorldEnvironment/RobotPaths_2" unique_id=484532741 instance=ExtResource("10_in6fb")]
+[node name="RobotPath_4" parent="WorldEnvironment/RobotPaths_2" unique_id=484532741 instance=ExtResource("10_in6fb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3570757, 0, -1.9530425)
-visible = false
-
-[node name="RobotPath5" parent="WorldEnvironment/RobotPaths_2" unique_id=1016444376 instance=ExtResource("10_in6fb")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.012426853, 0, 1.6135483)
-visible = false
-
-[node name="RobotPath6" parent="WorldEnvironment/RobotPaths_2" unique_id=421327794 instance=ExtResource("10_in6fb")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.7824965, 0, 1.6135483)
-visible = false
-
-[node name="RobotPath8" parent="WorldEnvironment/RobotPaths_2" unique_id=972999183 instance=ExtResource("10_in6fb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4108152, 0, -1.9909306)
-visible = false
 wait_time = 0.0
 
-[node name="Ground" type="StaticBody3D" parent="." unique_id=1565348839]
+[node name="RobotPath_5" parent="WorldEnvironment/RobotPaths_2" unique_id=1403458801 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.770083, 0, -5.3208833)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1374112065]
-shape = SubResource("BoxShape3D_hjhdi")
-debug_fill = false
+[node name="RobotPath_6" parent="WorldEnvironment/RobotPaths_2" unique_id=982260376 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012426853, 0, -5.3208833)
+
+[node name="RobotPath_7" parent="WorldEnvironment/RobotPaths_2" unique_id=756030708 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7824965, 0, -5.3208833)
+
+[node name="RobotPath_8" parent="WorldEnvironment/RobotPaths_2" unique_id=972999183 instance=ExtResource("10_in6fb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4108152, 0, -1.9909306)
+wait_time = 0.0
+
+[node name="Tasks" type="Node3D" parent="WorldEnvironment" unique_id=794450806]
+
+[node name="Archive_Fetch_Red" parent="WorldEnvironment/Tasks" unique_id=290512116 instance=ExtResource("12_cpklm")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -6.657341)
+available_task = ExtResource("5_cu1hc")
+
+[node name="Archive_Fetch_Blue" parent="WorldEnvironment/Tasks" unique_id=931396242 instance=ExtResource("12_cpklm")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -4.7982297, 0, -6.657341)
+available_task = ExtResource("13_gwra1")
+
+[node name="Archive_Fetch_Green" parent="WorldEnvironment/Tasks" unique_id=832237052 instance=ExtResource("12_cpklm")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 4.798229, 0, -6.6737165)
+available_task = ExtResource("14_d7jot")
+
+[node name="Archive_Save_Red" parent="WorldEnvironment/Tasks" unique_id=1339767815 instance=ExtResource("12_cpklm")]
+transform = Transform3D(3.215635, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 3.8248353)
+available_task = ExtResource("6_hoxc8")
+
+[node name="Archive_Save_Blue" parent="WorldEnvironment/Tasks" unique_id=1632518194 instance=ExtResource("12_cpklm")]
+transform = Transform3D(3.4061594, 0, 0, 0, 4, 0, 0, 0, 4, 4.8226466, 0, 3.8195753)
+available_task = ExtResource("15_d7jot")
+
+[node name="Archive_Save_Green" parent="WorldEnvironment/Tasks" unique_id=1623201843 instance=ExtResource("12_cpklm")]
+transform = Transform3D(3.2942762, 0, 0, 0, 4, 0, 0, 0, 4, -4.7825756, 0, 3.874608)
+available_task = ExtResource("16_xkysy")
+
+[node name="Archive_Shred" parent="WorldEnvironment/Tasks" unique_id=1867222573 instance=ExtResource("12_cpklm")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 2.86429, -0.0010567904, 0, -1.4526341)
+available_task = ExtResource("7_heveu")
 
 [node name="UI" type="Control" parent="." unique_id=1276026679]
 layout_mode = 3

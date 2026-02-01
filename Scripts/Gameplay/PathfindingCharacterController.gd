@@ -1,3 +1,4 @@
+class_name PathfindingCharacterController
 extends CharacterBody3D
 
 @export_group("References")

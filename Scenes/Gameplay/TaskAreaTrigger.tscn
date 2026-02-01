@@ -11,7 +11,8 @@ albedo_color = Color(0.18378833, 0.44223362, 0.26211098, 0.4117647)
 [node name="TaskAreaTrigger" type="Node3D" unique_id=290512116]
 script = ExtResource("1_62lka")
 
-[node name="Area3D" type="Area3D" parent="." unique_id=2034945164]
+[node name="Area3D" type="Area3D" parent="." unique_id=149271990]
+collision_layer = 16
 collision_mask = 16
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=679643271]
@@ -21,7 +22,7 @@ debug_fill = false
 [node name="CSGSphere3D" type="CSGSphere3D" parent="Area3D/CollisionShape3D" unique_id=114410264]
 layers = 32
 material_override = SubResource("StandardMaterial3D_62lka")
-rings = 18
+rings = 50
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

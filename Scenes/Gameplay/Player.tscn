@@ -6,7 +6,8 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5ya3b"]
 
 [node name="Player" type="CharacterBody3D" unique_id=1717530107]
-collision_layer = 17
+collision_layer = 49
+collision_mask = 49
 script = ExtResource("1_8i8gy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2125102929]
