@@ -1,3 +1,53 @@
 [gd_scene format=3 uid="uid://dha7wv5kajmff"]
 
+[ext_resource type="PackedScene" uid="uid://dewhlp7xil6cp" path="res://Scenes/Gameplay/ProgressionManager.tscn" id="1_m2bq6"]
+[ext_resource type="PackedScene" uid="uid://c4jg7tbxyvgrf" path="res://Scenes/Gameplay/TaskManager.tscn" id="2_5k4bo"]
+[ext_resource type="Script" uid="uid://bd8y727i1b38m" path="res://Scripts/Gameplay/TaskManager.gd" id="3_nnrb0"]
+[ext_resource type="Script" uid="uid://sxhqxlbkjidj" path="res://Scripts/Base/BaseTask.gd" id="4_4w4pd"]
+[ext_resource type="Resource" uid="uid://w8vhl1682eyl" path="res://Resources/Tasks/ArchiveFetchTask.tres" id="5_cu1hc"]
+[ext_resource type="Resource" uid="uid://dxd3c81c8bofn" path="res://Resources/Tasks/ArchiveSaveTask.tres" id="6_hoxc8"]
+[ext_resource type="Resource" uid="uid://c83x2ka3rjyon" path="res://Resources/Tasks/ArchiveShredTask.tres" id="7_heveu"]
+[ext_resource type="PackedScene" uid="uid://de5pi0emygggu" path="res://Assets/blockout/BO_R_archive.fbx" id="8_cu1hc"]
+
+[sub_resource type="Environment" id="Environment_hoxc8"]
+background_mode = 1
+
 [node name="Game" type="Node3D" unique_id=1108347675]
+
+[node name="Managers" type="Node" parent="." unique_id=828745536]
+
+[node name="ProgressionManager" parent="Managers" unique_id=474437570 instance=ExtResource("1_m2bq6")]
+
+[node name="TaskManager" parent="Managers" unique_id=337821629 instance=ExtResource("2_5k4bo")]
+script = ExtResource("3_nnrb0")
+tasks_list = Array[ExtResource("4_4w4pd")]([ExtResource("5_cu1hc"), ExtResource("6_hoxc8"), ExtResource("7_heveu")])
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=775310628]
+transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49999997, 0, 13.5, 6.5)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1883427065]
+environment = SubResource("Environment_hoxc8")
+
+[node name="BO_R_archive" parent="WorldEnvironment" unique_id=1249046529 instance=ExtResource("8_cu1hc")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment" unique_id=1170449062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9960995, 4.0426235, 0)
+light_color = Color(0.7192194, 0.27638942, 0.7036016, 1)
+light_energy = 50.0
+light_volumetric_fog_energy = 0.0
+omni_range = 10.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="WorldEnvironment" unique_id=1826021942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4361773, 4.0426235, 0)
+light_color = Color(0.7192194, 0.27638942, 0.7036016, 1)
+light_energy = 50.0
+light_volumetric_fog_energy = 0.0
+omni_range = 10.0
+
+[node name="UI" type="Control" parent="." unique_id=1276026679]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

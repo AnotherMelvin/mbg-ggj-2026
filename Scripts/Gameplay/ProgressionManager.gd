@@ -61,14 +61,11 @@ func add_suspicion_meter() -> void:
 
 func _load_config() -> void:
 	match current_level:
-		1: 
-			official_task_target = RemoteConfig.get_value("official_task_target_1")
-			spy_task_target = RemoteConfig.get_value("spy_task_target_1")
-			suspicion_limit = RemoteConfig.get_value("suspicion_limit_1")
-		_: 
-			official_task_target = RemoteConfig.get_value("official_task_target_1")
-			spy_task_target = RemoteConfig.get_value("spy_task_target_1")
-			suspicion_limit = RemoteConfig.get_value("suspicion_limit_1")
+		0: 
+			official_task_target = RemoteConfig.get_value("official_task_target_archive")
+			spy_task_target = RemoteConfig.get_value("spy_task_target_archive")
+			suspicion_limit = RemoteConfig.get_value("suspicion_limit_archive")
+			time_limit = RemoteConfig.get_value("time_limit_archive")
 	
 
 	

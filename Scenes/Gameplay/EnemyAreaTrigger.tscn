@@ -8,6 +8,12 @@
 transparency = 1
 albedo_color = Color(0.18378833, 0.44223362, 0.26211098, 0.4117647)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vv4y2"]
+transparency = 1
+albedo_color = Color(0.5411765, 0, 0.078431375, 0.5882353)
+emission_enabled = true
+emission = Color(2.6898527, 0.16781946, 4.124167e-06, 1)
+
 [node name="EnemyAreaTrigger" type="Node3D" unique_id=290512116]
 script = ExtResource("1_iujq1")
 
@@ -22,5 +28,12 @@ debug_fill = false
 layers = 32
 material_override = SubResource("StandardMaterial3D_62lka")
 rings = 18
+
+[node name="DetectionArea" type="CSGCylinder3D" parent="Area3D/CollisionShape3D" unique_id=1007862172]
+transform = Transform3D(0.909, 0, 0, 0, 0.05, 0, 0, 0, 0.909, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_vv4y2")
+cast_shadow = 0
+height = 0.048828125
+sides = 60
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

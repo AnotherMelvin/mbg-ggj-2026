@@ -1,15 +1,22 @@
 [gd_scene format=3 uid="uid://b5ddg5kvw3a6i"]
 
-[ext_resource type="Script" uid="uid://diiynush0lkut" path="res://Scripts/Gameplay/CharacterController.gd" id="1_chm0m"]
 [ext_resource type="Script" uid="uid://bdnhpue0rmrvt" path="res://Scripts/Gameplay/RobotPath.gd" id="1_r8vti"]
+[ext_resource type="PackedScene" uid="uid://cc4lmfodkws6q" path="res://Scenes/Gameplay/Player.tscn" id="2_hwc24"]
 [ext_resource type="Script" uid="uid://11btah808tow" path="res://Scripts/Gameplay/PathfindingCharacterController.gd" id="3_hkm8i"]
 [ext_resource type="PackedScene" uid="uid://43hmhavvd22c" path="res://Assets/Bots/bot_archive.glb" id="3_hwc24"]
 [ext_resource type="PackedScene" uid="uid://cqqsd4hnp5reu" path="res://Scenes/Gameplay/EnemyAreaTrigger.tscn" id="4_jxptq"]
 [ext_resource type="PackedScene" uid="uid://bsjxqe8jbhkdi" path="res://Scenes/Gameplay/TaskAreaTrigger.tscn" id="4_yyb55"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5ya3b"]
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r8vti"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hwc24"]
+
+[sub_resource type="Sky" id="Sky_5ya3b"]
+sky_material = SubResource("PanoramaSkyMaterial_hwc24")
+
+[sub_resource type="Environment" id="Environment_1uhr6"]
+background_mode = 2
+sky = SubResource("Sky_5ya3b")
 
 [node name="World" type="Node3D" unique_id=109882125]
 
@@ -38,17 +45,8 @@ script = ExtResource("1_r8vti")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.990423, 1, -4.0907965)
 script = ExtResource("1_r8vti")
 
-[node name="Player" type="CharacterBody3D" parent="." unique_id=1271522848]
+[node name="Player" parent="." unique_id=1717530107 instance=ExtResource("2_hwc24")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-collision_layer = 17
-script = ExtResource("1_chm0m")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=945783936]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.467497, 0)
-shape = SubResource("CapsuleShape3D_5ya3b")
-
-[node name="bot_archive2" parent="Player" unique_id=1369302695 instance=ExtResource("3_hwc24")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -1.5, 0)
 
 [node name="Enemy" type="CharacterBody3D" parent="." unique_id=277613075 node_paths=PackedStringArray("pathways")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.254757, 1, 0)
@@ -59,7 +57,7 @@ acceleration = 20.0
 turn_speed = 8.0
 
 [node name="EnemyAreaTrigger" parent="Enemy" unique_id=290512116 instance=ExtResource("4_jxptq")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, -1, -2)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy" unique_id=192587670]
 shape = SubResource("CapsuleShape3D_r8vti")
@@ -78,3 +76,6 @@ current = true
 
 [node name="TaskAreaTrigger" parent="." unique_id=755487260 instance=ExtResource("4_yyb55")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, -11.46028)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=23507347]
+environment = SubResource("Environment_1uhr6")
