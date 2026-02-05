@@ -4,7 +4,7 @@
 
 [resource]
 transparency = 2
-alpha_scissor_threshold = 0.925
+alpha_scissor_threshold = 0.03
 alpha_antialiasing_mode = 0
 shading_mode = 0
 albedo_texture = ExtResource("1_c5cnu")

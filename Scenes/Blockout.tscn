@@ -8,15 +8,24 @@
 [ext_resource type="PackedScene" uid="uid://dlm77iyxdnh52" path="res://Assets/Bots/bot_server.glb" id="3_gpb1y"]
 [ext_resource type="PackedScene" uid="uid://cji80fglyk425" path="res://Assets/blockout/BO_R_warehouse.fbx" id="4_8kub2"]
 [ext_resource type="PackedScene" uid="uid://ctyx3ipc8j0oe" path="res://Assets/Bots/bot_warehouse.glb" id="4_v03ri"]
+[ext_resource type="PackedScene" uid="uid://cm6bd3fj7khyp" path="res://Assets/envi/R_kitchen.fbx" id="8_ddpfb"]
 [ext_resource type="PackedScene" uid="uid://n0tfx6lxclo2" path="res://Assets/envi/R_archive.fbx" id="9_vxeb4"]
+[ext_resource type="PackedScene" uid="uid://f7nbe8wlrxgt" path="res://Assets/Mc/MC_archive.glb" id="10_4wyk0"]
 [ext_resource type="PackedScene" uid="uid://djgqxic2gsb8" path="res://Assets/envi/archive_blue.fbx" id="10_sb203"]
 [ext_resource type="PackedScene" uid="uid://dmotqxkw252jl" path="res://Assets/envi/archive_green.fbx" id="11_4wyk0"]
 [ext_resource type="PackedScene" uid="uid://b4n0yjd8seogn" path="res://Assets/envi/archive_red.fbx" id="12_l80s3"]
+[ext_resource type="PackedScene" uid="uid://c5002eus03yn6" path="res://Assets/envi/Kitchen_1_healthy.fbx" id="15_hmysy"]
+[ext_resource type="PackedScene" uid="uid://bcbx3y2rkcit" path="res://Assets/envi/Kitchen_1_poison.fbx" id="16_cv3oy"]
+[ext_resource type="PackedScene" uid="uid://buuuioh3bq46j" path="res://Assets/envi/Kitchen_2_healthy.fbx" id="17_vrreb"]
+[ext_resource type="PackedScene" uid="uid://bvm0uo4syn8u7" path="res://Assets/envi/Kitchen_2_poison.fbx" id="18_q5vbq"]
+[ext_resource type="PackedScene" uid="uid://cgxb7uogwbbov" path="res://Assets/envi/Kitchen_3_healthy.fbx" id="19_okkgp"]
+[ext_resource type="PackedScene" uid="uid://bbt3v26pg3xai" path="res://Assets/envi/Kitchen_3_poison.fbx" id="20_ke114"]
 
 [node name="Node3D" type="Node3D" unique_id=478515854]
 
 [node name="BO_R_archive" parent="." unique_id=798213135 instance=ExtResource("1_jg3jj")]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, 7.7878876, 0, 15.852061)
+visible = false
 
 [node name="OmniLight3D" type="OmniLight3D" parent="BO_R_archive" unique_id=1923921839]
 transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, -6.88086, 2.544502, -0.8510376)
@@ -59,13 +68,37 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.91620684, 0, 0)
 [node name="bot_warehouse2" parent="." unique_id=2129923952 instance=ExtResource("4_v03ri")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.242223, 0, 0)
 
+[node name="R_kitchen" parent="." unique_id=1247270346 instance=ExtResource("8_ddpfb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.44101, 0, 0)
+
 [node name="bot_kitchen2" parent="." unique_id=958244472 instance=ExtResource("2_vxeb4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3637204, 0, 0)
 
 [node name="R_archive" parent="." unique_id=522024316 instance=ExtResource("9_vxeb4")]
+
+[node name="MC_archive2" parent="." unique_id=468660454 instance=ExtResource("10_4wyk0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3622833, 0, 0.54982674)
 
 [node name="archive_blue" parent="." unique_id=607206317 instance=ExtResource("10_sb203")]
 
 [node name="archive_green" parent="." unique_id=2001648968 instance=ExtResource("11_4wyk0")]
 
 [node name="archive_red" parent="." unique_id=957886642 instance=ExtResource("12_l80s3")]
+
+[node name="Kitchen_1_healthy" parent="." unique_id=1404624023 instance=ExtResource("15_hmysy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.041607, 0, -0.33343935)
+
+[node name="Kitchen_1_poison" parent="." unique_id=45856920 instance=ExtResource("16_cv3oy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.194168, 0, -0.33343935)
+
+[node name="Kitchen_2_healthy" parent="." unique_id=273597153 instance=ExtResource("17_vrreb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.083878, 0, 1.300766)
+
+[node name="Kitchen_2_poison" parent="." unique_id=1776599426 instance=ExtResource("18_q5vbq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.072556, 0, 1.4007039)
+
+[node name="Kitchen_3_healthy" parent="." unique_id=679826196 instance=ExtResource("19_okkgp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.00943, 0, 3.0470862)
+
+[node name="Kitchen_3_poison" parent="." unique_id=321543355 instance=ExtResource("20_ke114")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.05268, 0, 2.8773456)
