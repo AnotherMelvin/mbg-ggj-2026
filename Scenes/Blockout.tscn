@@ -23,6 +23,15 @@
 
 [node name="Node3D" type="Node3D" unique_id=478515854]
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1810240879]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19118595, 8.613782, 1.3239627)
+visible = false
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1717352930]
+transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.7071068, -28.625467, 17.235233, 17.783234)
+cull_mask = 1047553
+fov = 40.5
+
 [node name="BO_R_archive" parent="." unique_id=798213135 instance=ExtResource("1_jg3jj")]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, 7.7878876, 0, 15.852061)
 visible = false
@@ -50,40 +59,38 @@ layers = 4
 visible = false
 layers = 8
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1810240879]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19118595, 8.613782, 1.3239627)
-visible = false
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1717352930]
-transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.7071068, -28.625467, 17.235233, 17.783234)
-cull_mask = 1047553
-fov = 40.5
-
 [node name="bot_archive2" parent="." unique_id=453175675 instance=ExtResource("1_8kub2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.004222, 0, 0)
+visible = false
 
 [node name="bot_server2" parent="." unique_id=1812401655 instance=ExtResource("3_gpb1y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.91620684, 0, 0)
+visible = false
+
+[node name="bot_kitchen2" parent="." unique_id=958244472 instance=ExtResource("2_vxeb4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3637204, 0, 0)
+visible = false
 
 [node name="bot_warehouse2" parent="." unique_id=2129923952 instance=ExtResource("4_v03ri")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.242223, 0, 0)
+visible = false
 
 [node name="R_kitchen" parent="." unique_id=1247270346 instance=ExtResource("8_ddpfb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.44101, 0, 0)
 
-[node name="bot_kitchen2" parent="." unique_id=958244472 instance=ExtResource("2_vxeb4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3637204, 0, 0)
-
-[node name="R_archive" parent="." unique_id=522024316 instance=ExtResource("9_vxeb4")]
+[node name="R_archive" parent="." unique_id=1319049315 instance=ExtResource("9_vxeb4")]
 
 [node name="MC_archive2" parent="." unique_id=468660454 instance=ExtResource("10_4wyk0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3622833, 0, 0.54982674)
 
-[node name="archive_blue" parent="." unique_id=607206317 instance=ExtResource("10_sb203")]
+[node name="archive_blue" parent="." unique_id=1881465036 instance=ExtResource("10_sb203")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13159513, 2.3208685, 0)
 
-[node name="archive_green" parent="." unique_id=2001648968 instance=ExtResource("11_4wyk0")]
+[node name="archive_green" parent="." unique_id=55246223 instance=ExtResource("11_4wyk0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0822651, 2.3616128, 0)
 
-[node name="archive_red" parent="." unique_id=957886642 instance=ExtResource("12_l80s3")]
+[node name="archive_red" parent="." unique_id=1257429667 instance=ExtResource("12_l80s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1513207, 2.4085283, 0)
 
 [node name="Kitchen_1_healthy" parent="." unique_id=1404624023 instance=ExtResource("15_hmysy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.041607, 0, -0.33343935)
