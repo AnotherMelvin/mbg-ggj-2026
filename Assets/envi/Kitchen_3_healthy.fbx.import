@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cgxb7uogwbbov"
-path="res://.godot/imported/Kitchen_3_healthy.fbx-30f5e3d30aeb56555c45352c98be8dbb.scn"
+path="res://.godot/imported/kitchen_3_healthy.fbx-13c8cef92d6e2d8b6154d9ecd145f686.scn"
 
 [deps]
 
-source_file="res://Assets/envi/Kitchen_3_healthy.fbx"
-dest_files=["res://.godot/imported/Kitchen_3_healthy.fbx-30f5e3d30aeb56555c45352c98be8dbb.scn"]
+source_file="res://Assets/envi/kitchen_3_healthy.fbx"
+dest_files=["res://.godot/imported/kitchen_3_healthy.fbx-13c8cef92d6e2d8b6154d9ecd145f686.scn"]
 
 [params]
 

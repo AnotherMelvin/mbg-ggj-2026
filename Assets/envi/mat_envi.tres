@@ -4,7 +4,7 @@
 
 [resource]
 transparency = 2
-alpha_scissor_threshold = 0.126
+alpha_scissor_threshold = 0.212
 alpha_antialiasing_mode = 0
 shading_mode = 0
 albedo_texture = ExtResource("1_ksdcu")

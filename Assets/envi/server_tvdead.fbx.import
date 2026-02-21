@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cm6bd3fj7khyp"
-path="res://.godot/imported/R_kitchen.fbx-fd5f4e8569322dedc7775852eefa8da6.scn"
+uid="uid://dsligodhuvqlo"
+path="res://.godot/imported/server_tvdead.fbx-7d0ac7b3239e790f3791b964c1ee7a37.scn"
 
 [deps]
 
-source_file="res://Assets/envi/R_kitchen.fbx"
-dest_files=["res://.godot/imported/R_kitchen.fbx-fd5f4e8569322dedc7775852eefa8da6.scn"]
+source_file="res://Assets/envi/server_tvdead.fbx"
+dest_files=["res://.godot/imported/server_tvdead.fbx-7d0ac7b3239e790f3791b964c1ee7a37.scn"]
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true

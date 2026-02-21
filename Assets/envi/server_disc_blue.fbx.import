@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bvm0uo4syn8u7"
-path="res://.godot/imported/kitchen_2_poison.fbx-1aa3c52b5ae8ddcfedbfeb6bd91e660b.scn"
+uid="uid://d0pra57r404vy"
+path="res://.godot/imported/server_disc_blue.fbx-a6d22e6c217943b81fcf3b850985eca9.scn"
 
 [deps]
 
-source_file="res://Assets/envi/kitchen_2_poison.fbx"
-dest_files=["res://.godot/imported/kitchen_2_poison.fbx-1aa3c52b5ae8ddcfedbfeb6bd91e660b.scn"]
+source_file="res://Assets/envi/server_disc_blue.fbx"
+dest_files=["res://.godot/imported/server_disc_blue.fbx-a6d22e6c217943b81fcf3b850985eca9.scn"]
 
 [params]
 

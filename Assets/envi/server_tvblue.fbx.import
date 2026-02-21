@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://n0tfx6lxclo2"
-path="res://.godot/imported/R_archive.fbx-a6803dfe53e6022ac52752213aa600ad.scn"
+uid="uid://cjcingqrt3bx2"
+path="res://.godot/imported/server_tvblue.fbx-1299a3bf8b27798683003a426ee81a1f.scn"
 
 [deps]
 
-source_file="res://Assets/envi/R_archive.fbx"
-dest_files=["res://.godot/imported/R_archive.fbx-a6803dfe53e6022ac52752213aa600ad.scn"]
+source_file="res://Assets/envi/server_tvblue.fbx"
+dest_files=["res://.godot/imported/server_tvblue.fbx-1299a3bf8b27798683003a426ee81a1f.scn"]
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="MeshInstance3D"
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true

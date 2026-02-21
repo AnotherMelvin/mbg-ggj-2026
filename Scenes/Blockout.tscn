@@ -8,18 +8,29 @@
 [ext_resource type="PackedScene" uid="uid://dlm77iyxdnh52" path="res://Assets/Bots/bot_server.glb" id="3_gpb1y"]
 [ext_resource type="PackedScene" uid="uid://cji80fglyk425" path="res://Assets/blockout/BO_R_warehouse.fbx" id="4_8kub2"]
 [ext_resource type="PackedScene" uid="uid://ctyx3ipc8j0oe" path="res://Assets/Bots/bot_warehouse.glb" id="4_v03ri"]
-[ext_resource type="PackedScene" uid="uid://cm6bd3fj7khyp" path="res://Assets/envi/R_kitchen.fbx" id="8_ddpfb"]
-[ext_resource type="PackedScene" uid="uid://n0tfx6lxclo2" path="res://Assets/envi/R_archive.fbx" id="9_vxeb4"]
+[ext_resource type="PackedScene" uid="uid://cm6bd3fj7khyp" path="res://Assets/envi/room_kitchen.fbx" id="8_ddpfb"]
+[ext_resource type="PackedScene" uid="uid://n0tfx6lxclo2" path="res://Assets/envi/room_archive.fbx" id="9_vxeb4"]
 [ext_resource type="PackedScene" uid="uid://f7nbe8wlrxgt" path="res://Assets/Mc/MC_archive.glb" id="10_4wyk0"]
 [ext_resource type="PackedScene" uid="uid://djgqxic2gsb8" path="res://Assets/envi/archive_blue.fbx" id="10_sb203"]
 [ext_resource type="PackedScene" uid="uid://dmotqxkw252jl" path="res://Assets/envi/archive_green.fbx" id="11_4wyk0"]
 [ext_resource type="PackedScene" uid="uid://b4n0yjd8seogn" path="res://Assets/envi/archive_red.fbx" id="12_l80s3"]
-[ext_resource type="PackedScene" uid="uid://c5002eus03yn6" path="res://Assets/envi/Kitchen_1_healthy.fbx" id="15_hmysy"]
-[ext_resource type="PackedScene" uid="uid://bcbx3y2rkcit" path="res://Assets/envi/Kitchen_1_poison.fbx" id="16_cv3oy"]
-[ext_resource type="PackedScene" uid="uid://buuuioh3bq46j" path="res://Assets/envi/Kitchen_2_healthy.fbx" id="17_vrreb"]
-[ext_resource type="PackedScene" uid="uid://bvm0uo4syn8u7" path="res://Assets/envi/Kitchen_2_poison.fbx" id="18_q5vbq"]
-[ext_resource type="PackedScene" uid="uid://cgxb7uogwbbov" path="res://Assets/envi/Kitchen_3_healthy.fbx" id="19_okkgp"]
-[ext_resource type="PackedScene" uid="uid://bbt3v26pg3xai" path="res://Assets/envi/Kitchen_3_poison.fbx" id="20_ke114"]
+[ext_resource type="PackedScene" uid="uid://c5002eus03yn6" path="res://Assets/envi/kitchen_1_healthy.fbx" id="15_hmysy"]
+[ext_resource type="PackedScene" uid="uid://bcbx3y2rkcit" path="res://Assets/envi/kitchen_1_poison.fbx" id="16_cv3oy"]
+[ext_resource type="PackedScene" uid="uid://buuuioh3bq46j" path="res://Assets/envi/kitchen_2_healthy.fbx" id="17_vrreb"]
+[ext_resource type="PackedScene" uid="uid://bvm0uo4syn8u7" path="res://Assets/envi/kitchen_2_poison.fbx" id="18_q5vbq"]
+[ext_resource type="PackedScene" uid="uid://cogj2be1hrhhe" path="res://Assets/envi/room_server.fbx" id="19_ke114"]
+[ext_resource type="PackedScene" uid="uid://cgxb7uogwbbov" path="res://Assets/envi/kitchen_3_healthy.fbx" id="19_okkgp"]
+[ext_resource type="PackedScene" uid="uid://bbt3v26pg3xai" path="res://Assets/envi/kitchen_3_poison.fbx" id="20_ke114"]
+[ext_resource type="PackedScene" uid="uid://cjcingqrt3bx2" path="res://Assets/envi/server_tvblue.fbx" id="22_q8cin"]
+[ext_resource type="PackedScene" uid="uid://dsligodhuvqlo" path="res://Assets/envi/server_tvdead.fbx" id="23_ejp7w"]
+[ext_resource type="PackedScene" uid="uid://do3hipjpe7vdn" path="res://Assets/envi/server_tvgreen.fbx" id="24_ul6xr"]
+[ext_resource type="PackedScene" uid="uid://cjssfnntoe6c5" path="res://Assets/envi/server_tvred.fbx" id="25_csydy"]
+[ext_resource type="PackedScene" uid="uid://d0pra57r404vy" path="res://Assets/envi/server_disc_blue.fbx" id="26_hx0lh"]
+[ext_resource type="PackedScene" uid="uid://bir4fwgukgwta" path="res://Assets/envi/server_disc_blue_hack.fbx" id="27_x3j2x"]
+[ext_resource type="PackedScene" uid="uid://bx7gu2ja31nkt" path="res://Assets/envi/server_disc_green.fbx" id="28_iiw6k"]
+[ext_resource type="PackedScene" uid="uid://b8tif4ffqdxyi" path="res://Assets/envi/server_disc_green_hack.fbx" id="29_drh5x"]
+[ext_resource type="PackedScene" uid="uid://bre3nitn17q5b" path="res://Assets/envi/server_disc_red.fbx" id="30_5fbxt"]
+[ext_resource type="PackedScene" uid="uid://b1sgvdvi7amvg" path="res://Assets/envi/server_disc_red_hack.fbx" id="31_4qvp6"]
 
 [node name="Node3D" type="Node3D" unique_id=478515854]
 
@@ -68,44 +79,72 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.91620684, 0, 0)
 visible = false
 
 [node name="bot_kitchen2" parent="." unique_id=958244472 instance=ExtResource("2_vxeb4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3637204, 0, 0)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.693882, 0, 0)
 
 [node name="bot_warehouse2" parent="." unique_id=2129923952 instance=ExtResource("4_v03ri")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.242223, 0, 0)
 visible = false
 
-[node name="R_kitchen" parent="." unique_id=1247270346 instance=ExtResource("8_ddpfb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.44101, 0, 0)
-
-[node name="R_archive" parent="." unique_id=1319049315 instance=ExtResource("9_vxeb4")]
-
 [node name="MC_archive2" parent="." unique_id=468660454 instance=ExtResource("10_4wyk0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3622833, 0, 0.54982674)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.695318, 0, 0.54982674)
 
-[node name="archive_blue" parent="." unique_id=1881465036 instance=ExtResource("10_sb203")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13159513, 2.3208685, 0)
+[node name="archive_blue" parent="." unique_id=131112658 instance=ExtResource("10_sb203")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.926006, 2.3208685, 0)
 
-[node name="archive_green" parent="." unique_id=55246223 instance=ExtResource("11_4wyk0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0822651, 2.3616128, 0)
+[node name="archive_green" parent="." unique_id=1451892617 instance=ExtResource("11_4wyk0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.975336, 2.3616128, 0)
 
-[node name="archive_red" parent="." unique_id=1257429667 instance=ExtResource("12_l80s3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1513207, 2.4085283, 0)
+[node name="archive_red" parent="." unique_id=938763742 instance=ExtResource("12_l80s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.208923, 2.4085283, 0)
 
-[node name="Kitchen_1_healthy" parent="." unique_id=1404624023 instance=ExtResource("15_hmysy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.041607, 0, -0.33343935)
+[node name="Kitchen_1_healthy" parent="." unique_id=1707577415 instance=ExtResource("15_hmysy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.494331, 0, -0.33343935)
 
-[node name="Kitchen_1_poison" parent="." unique_id=45856920 instance=ExtResource("16_cv3oy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.194168, 0, -0.33343935)
+[node name="Kitchen_1_poison" parent="." unique_id=651936303 instance=ExtResource("16_cv3oy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.646893, 0, -0.33343935)
 
-[node name="Kitchen_2_healthy" parent="." unique_id=273597153 instance=ExtResource("17_vrreb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.083878, 0, 1.300766)
+[node name="Kitchen_2_healthy" parent="." unique_id=1991828759 instance=ExtResource("17_vrreb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.536602, 0, 1.300766)
 
-[node name="Kitchen_2_poison" parent="." unique_id=1776599426 instance=ExtResource("18_q5vbq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.072556, 0, 1.4007039)
+[node name="Kitchen_2_poison" parent="." unique_id=1854501704 instance=ExtResource("18_q5vbq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.52528, 0, 1.4007039)
 
-[node name="Kitchen_3_healthy" parent="." unique_id=679826196 instance=ExtResource("19_okkgp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.00943, 0, 3.0470862)
+[node name="Kitchen_3_healthy" parent="." unique_id=635195406 instance=ExtResource("19_okkgp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.462154, 0, 3.0470862)
 
-[node name="Kitchen_3_poison" parent="." unique_id=321543355 instance=ExtResource("20_ke114")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.05268, 0, 2.8773456)
+[node name="Kitchen_3_poison" parent="." unique_id=1471784191 instance=ExtResource("20_ke114")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.505405, 0, 2.8773456)
+
+[node name="room_server" parent="." unique_id=1297880825 instance=ExtResource("19_ke114")]
+
+[node name="room_archive" parent="." unique_id=712760710 instance=ExtResource("9_vxeb4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.257519, 0, 0)
+
+[node name="room_kitchen" parent="." unique_id=1193720576 instance=ExtResource("8_ddpfb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.348436, 0, 0)
+
+[node name="server_tvblue" parent="." unique_id=1346973114 instance=ExtResource("22_q8cin")]
+
+[node name="server_tvdead" parent="." unique_id=1871896654 instance=ExtResource("23_ejp7w")]
+
+[node name="server_tvgreen" parent="." unique_id=717672634 instance=ExtResource("24_ul6xr")]
+
+[node name="server_tvred" parent="." unique_id=1443551369 instance=ExtResource("25_csydy")]
+
+[node name="server_disc_blue" parent="." unique_id=1188664022 instance=ExtResource("26_hx0lh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9620857, 4.3561535, -2.2881708)
+
+[node name="server_disc_blue_hack" parent="." unique_id=88223337 instance=ExtResource("27_x3j2x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9620857, 4.3561535, -0.6078434)
+
+[node name="server_disc_green" parent="." unique_id=1544433323 instance=ExtResource("28_iiw6k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4582615, 4.3561535, -2.3098502)
+
+[node name="server_disc_green_hack" parent="." unique_id=1397874377 instance=ExtResource("29_drh5x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4582615, 4.3561535, -0.6078434)
+
+[node name="server_disc_red" parent="." unique_id=973493011 instance=ExtResource("30_5fbxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31082535, 4.3561535, -2.336123)
+
+[node name="server_disc_red_hack" parent="." unique_id=1108339013 instance=ExtResource("31_4qvp6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31082535, 4.3561535, -0.6078434)
